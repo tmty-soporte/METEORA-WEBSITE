@@ -1,0 +1,52 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #5465FF;       /* Neon Blue */
+  --color-primary-light: #7684FF; /* Derived lighter blue for hovers/gradients */
+  --color-primary-dark: #3F4CE0;  /* Deeper variant */
+  
+  --color-secondary: #160F29;     /* Dark Purple */
+  --color-accent: #41D3BD;        /* Teal */
+  --color-accent-light: #5CEAD4;
+  
+  --color-neutral: #F3DFC1;       /* Champagne */
+  
+  /* Support & UI Colors */
+  --color-background: #FFFFFF;    /* Clean white base */
+  --color-surface: #F8F9FA;
+  --color-surface-hover: #F0F2F5;
+  
+  --color-text-main: #160F29;     /* Using dark purple for main text instead of charcoal */
+  --color-text-muted: #64748B;    /* Clean professional slate gray */
+  --color-text-light: #FFFFFF;
+  
+  --color-border: #E2E8F0;
+  
+  /* Typography */
+  --font-family: 'Figtree', system-ui, -apple-system, sans-serif;
+  
+  /* Shadows - More diffused and soft for high-end feel */
+  --shadow-sm: 0 1px 3px rgba(16, 15, 41, 0.04);
+  --shadow-md: 0 10px 20px -5px rgba(16, 15, 41, 0.06);
+  --shadow-lg: 0 20px 40px -15px rgba(16, 15, 41, 0.1);
+  --shadow-xl: 0 35px 60px -15px rgba(16, 15, 41, 0.12);
+  --shadow-premium: 0 30px 60px -12px rgba(84, 101, 255, 0.18); 
+  --shadow-card: 0 40px 80px -20px rgba(16, 15, 41, 0.08);
+  
+  /* Radii */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+  
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-24: 6rem;
+}

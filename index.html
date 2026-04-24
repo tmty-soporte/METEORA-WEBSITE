@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meteora - Advanced Technology Solutions for Modern Businesses">
+    <title>Meteora | Modern Technology Solutions</title>
+
+    <!-- Google Fonts: Figtree -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- Icons: Lucide (via CDN for clean SVG rendering) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- amCharts 5 Scripts -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-brand">
+                <img src="assets/logos/LOGO-BG BLANCO 1 (3).png" alt="Meteora" class="navbar-logo">
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#about">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#productos">Productos</a>
+                <a href="#contact">Contacto</a>
+                <a href="#contact" class="btn btn-primary nav-btn-cta">Solicitar demo</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Abstract Immersive Background -->
+        <div class="hero-immersive-bg">
+            <div class="glow-layer"></div>
+            <div class="mesh-layer"></div>
+            <div class="waves-layer">
+                <svg viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="wave-path path-1" d="M-100 400C200 300 400 600 800 500C1200 400 1400 700 1600 600"
+                        stroke="url(#wave-grad-1)" stroke-width="2" />
+                    <path class="wave-path path-2" d="M-100 500C300 400 600 700 1000 600C1400 500 1500 800 1700 700"
+                        stroke="url(#wave-grad-1.5)" stroke-width="1.5" />
+                    <path class="wave-path path-3" d="M-100 300C400 200 700 500 1100 400C1500 300 1600 600 1800 500"
+                        stroke="url(#wave-grad-3)" stroke-width="1" />
+                    <defs>
+                        <linearGradient id="wave-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#5465FF" stop-opacity="0" />
+                            <stop offset="50%" stop-color="#5465FF" stop-opacity="0.4" />
+                            <stop offset="100%" stop-color="#41D3BD" stop-opacity="0" />
+                        </linearGradient>
+                        <linearGradient id="wave-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#41D3BD" stop-opacity="0" />
+                            <stop offset="50%" stop-color="#41D3BD" stop-opacity="0.3" />
+                            <stop offset="100%" stop-color="#5465FF" stop-opacity="0" />
+                        </linearGradient>
+                        <linearGradient id="wave-grad-3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#5465FF" stop-opacity="0" />
+                            <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2" />
+                            <stop offset="100%" stop-color="#41D3BD" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="particles-layer"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-content fade-up">
+                <div class="hero-tagline">
+                    <span class="tagline-icon"><i data-lucide="sparkles"></i></span>
+                    Innovación con propósito | Más de 20 años de experiencia.
+                </div>
+                <h1>Transformamos datos en <br /><span>decisiones inteligentes</span></h1>
+                <p>Soluciones tecnológicas que optimizan tu operación, reducen costos y aceleran el crecimiento de tu
+                    organización.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-lg">Contáctanos</a>
+                </div>
+
+                <div class="logo-ribbon-section">
+                    <p class="ribbon-title">Alianzas estratégicas en innovación</p>
+                    <div class="logo-ribbon-container">
+                        <div class="logo-ribbon-track">
+                            <!-- Using provided brand logos -->
+                            <div class="ribbon-logo-item"><img src="assets/logos/vallenlogo1.png" alt="Vallen"></div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/jmaslogo1.png" alt="JMAS"></div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/simsalogo1.png" alt="Grupo SIMSA">
+                            </div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/agsallogo1.png"
+                                    alt="Aguas de Saltillo"></div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/amic.png" alt="AMIC"></div>
+                            <!-- Duplicates for seamless loop -->
+                            <div class="ribbon-logo-item"><img src="assets/logos/vallenlogo1.png" alt="Vallen"></div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/jmaslogo1.png" alt="JMAS"></div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/simsalogo1.png" alt="Grupo SIMSA">
+                            </div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/agsallogo1.png"
+                                    alt="Aguas de Saltillo"></div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/amic.png" alt="AMIC"></div>
+                            <!-- Extra set for stability -->
+                            <div class="ribbon-logo-item"><img src="assets/logos/vallenlogo1.png" alt="Vallen"></div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/jmaslogo1.png" alt="JMAS"></div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/simsalogo1.png" alt="Grupo SIMSA">
+                            </div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/agsallogo1.png"
+                                    alt="Aguas de Saltillo"></div>
+                            <div class="ribbon-logo-item"><img src="assets/logos/amic.png" alt="AMIC"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Video Strip Banner -->
+    <section class="video-strip-container">
+        <div class="video-strip-overlay"></div>
+        <video class="video-strip-content" autoplay muted loop playsinline>
+            <source src="assets/videos/fondo.mp4" type="video/mp4">
+            tu navegador no soporta video.
+        </video>
+    </section>
+
+    <section class="nosotros" id="about">
+        <!-- Subtle Technical Flow Lines -->
+        <div class="nosotros-texture">
+            <svg class="data-flow-svg" viewBox="0 0 1440 800" preserveAspectRatio="none">
+                <path class="flow-line line-a" d="M-100,200 Q300,50 720,200 T1540,200" fill="none"
+                    stroke="rgba(84,101,255,0.06)" stroke-width="1.5" />
+                <path class="flow-line line-b" d="M-100,500 Q400,750 720,500 T1540,500" fill="none"
+                    stroke="rgba(65,211,189,0.06)" stroke-width="1.5" />
+                <path class="flow-line line-c" d="M-100,800 Q250,700 500,800 T1000,800" fill="none"
+                    stroke="rgba(84,101,255,0.04)" stroke-width="1" />
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="nosotros-layout">
+                <!-- Left: Storytelling (60%) -->
+                <div class="nosotros-story fade-up">
+                    <span class="eyebrow">Nosotros</span>
+                    <h2>En Meteora no seguimos tendencias, <span>las creamos.</span></h2>
+                    <div class="description-block">
+                        <p>Somos una empresa mexicana de tecnología con más de 20 años de experiencia. Nos
+                            especializamos en transformar datos en decisiones inteligentes a través de soluciones de
+                            software innovadoras, escalables y diseñadas específicamente para resolver los problemas
+                            reales de tu negocio.</p>
+                        <p>Trabajamos con organizaciones públicas y privadas para optimizar sus operaciones, reducir
+                            costos y mejorar la toma de decisiones mediante tecnología de alto valor agregado.</p>
+                    </div>
+
+                    <div class="nosotros-extra-points">
+                        <h3>¿Por qué nuestros clientes nos eligen y se quedan?</h3>
+                        <div class="nosotros-points-grid">
+                            <div class="point-item"><i data-lucide="check-circle-2"></i><span>Socio estratégico, no
+                                    proveedor</span></div>
+                            <div class="point-item"><i data-lucide="check-circle-2"></i><span>Soluciones a medida</span>
+                            </div>
+                            <div class="point-item"><i data-lucide="check-circle-2"></i><span>Tecnologías
+                                    comprobadas</span></div>
+                            <div class="point-item"><i data-lucide="check-circle-2"></i><span>Presencia en 4
+                                    continentes</span></div>
+                            <div class="point-item"><i data-lucide="check-circle-2"></i><span>Capacitación
+                                    incluida</span></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Philosophy Panel (40%) -->
+                <div class="nosotros-philosophy fade-up" style="transition-delay: 200ms;">
+                    <span class="philosophy-eyebrow">Filosofía</span>
+
+                    <div class="philosophy-cards">
+                        <div class="p-card">
+                            <div class="p-card-header">
+                                <i data-lucide="target"></i>
+                                <h3>Misión</h3>
+                            </div>
+                            <p>Impulsar la transformación digital mediante soluciones tecnológicas que optimicen
+                                operaciones y generen resultados reales.</p>
+                        </div>
+
+                        <div class="p-card">
+                            <div class="p-card-header">
+                                <i data-lucide="eye"></i>
+                                <h3>Visión</h3>
+                            </div>
+                            <p>Ser líderes en innovación tecnológica, reconocidos por elevar la eficiencia operativa en
+                                sectores estratégicos.</p>
+                        </div>
+                    </div>
+
+                    <div class="philosophy-valores">
+                        <h3>Valores</h3>
+                        <div class="valores-mini-grid">
+                            <div class="v-mini-item">
+                                <i data-lucide="shield-check"></i>
+                                <span>Honestidad</span>
+                            </div>
+                            <div class="v-mini-item">
+                                <i data-lucide="lightbulb"></i>
+                                <span>Innovación</span>
+                            </div>
+                            <div class="v-mini-item">
+                                <i data-lucide="award"></i>
+                                <span>Calidad</span>
+                            </div>
+                            <div class="v-mini-item">
+                                <i data-lucide="heart"></i>
+                                <span>Compromiso</span>
+                            </div>
+                            <div class="v-mini-item">
+                                <i data-lucide="headphones"></i>
+                                <span>Servicio</span>
+                            </div>
+                            <div class="v-mini-item">
+                                <i data-lucide="trending-up"></i>
+                                <span>Responsabilidad</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subtle Legal Action -->
+                    <div class="philosophy-footer">
+                        <a href="./docs/aviso%20de%20privacidad.pdf" target="_blank" class="btn-minimal">Aviso de
+                            privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="servicios" id="servicios">
+        <div class="servicios-bg-texture">
+            <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+                <defs>
+                    <linearGradient id="serv-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#5465FF" />
+                        <stop offset="100%" stop-color="#41D3BD" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+                <path class="serv-line" d="M0,100 Q400,50 800,150 T1440,100" />
+                <path class="serv-line" d="M0,400 Q720,300 1440,400" />
+                <path class="serv-line" d="M0,700 Q400,750 800,650 T1440,700" />
+            </svg>
+        </div>
+        <div class="container">
+            <div class="servicios-header fade-up">
+                <span class="servicios-eyebrow">Soluciones que escalan tu operación</span>
+                <h2 class="section-title">Servicios</h2>
+            </div>
+            <div class="servicios-grid">
+                <div class="service-card featured fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="layout"></i></div>
+                    <div class="service-content">
+                        <h3>Aplicaciones a la medida</h3>
+                        <p>Soluciones personalizadas a la medida y de alta calidad flexibles a tus necesidades, usando
+                            estándares de usabilidad, accesibilidad y escalabilidad.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="workflow"></i></div>
+                    <div class="service-content">
+                        <h3>BPM</h3>
+                        <p>A medida que se acelera el ritmo de cambio, las empresas necesitan mejorar su capacidad para
+                            aprovechar oportunidades. Nosotros podemos ayudarte asesorándote para identificar las
+                            mejores practicas para tu negocio.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="users"></i></div>
+                    <div class="service-content">
+                        <h3>Outsourcing</h3>
+                        <p>Nuestros profesionales colaboran contigo poniendo a tu servicio su experiencia para con ello,
+                            lograr mantenerte a la vanguardia en TI.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="layers"></i></div>
+                    <div class="service-content">
+                        <h3>SOA</h3>
+                        <p>Un SOA es una metodología que orquesta una colección de servicios que funcionan
+                            independientes, pero que interactúan entre ellos donde todos juntos forman una 'Solución'.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="cloud"></i></div>
+                    <div class="service-content">
+                        <h3>Soluciones en la Nube</h3>
+                        <p>La gestión de software y datos en la nube es una excelente alternativa para usar la
+                            tecnología de última generación a un costo competitivo.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="globe"></i></div>
+                    <div class="service-content">
+                        <h3>Portales Corporativos</h3>
+                        <p>Un portal corporativo es más que un sitio web, es la solución que facilita la comunicación
+                            entre tus diferentes áreas de negocio y clientes.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="server"></i></div>
+                    <div class="service-content">
+                        <h3>Servidores de Aplicaciones</h3>
+                        <p>Es el órgano principal de los sistemas, es el equivalente al corazón humano.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="code-2"></i></div>
+                    <div class="service-content">
+                        <h3>Expertos en Back-end</h3>
+                        <p>Ofrecemos servicios que solucionarán tus necesidades de almacenamiento, administración,
+                            disponibilidad, migración y seguridad de información.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="factory"></i></div>
+                    <div class="service-content">
+                        <h3>Fábrica de Software</h3>
+                        <p>El uso de este modelo trae beneficios para nuestros clientes porque representa ahorros en la
+                            inversión total de sus proyectos.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="cpu"></i></div>
+                    <div class="service-content">
+                        <h3>Arquitectura TI</h3>
+                        <p>Soluciones que permitirán optimizar la infraestructura TI.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="landmark"></i></div>
+                    <div class="service-content">
+                        <h3>Gobierno Electrónico</h3>
+                        <p>Cada día se vuelve más necesario que exista una cercanía entre la población y sus
+                            autoridades.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="bar-chart-3"></i></div>
+                    <div class="service-content">
+                        <h3>Inteligencia de Negocios BI</h3>
+                        <p>Información completa, oportuna y en tiempo real.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-accent"></div>
+                    <div class="service-icon-box"><i data-lucide="map-pin"></i></div>
+                    <div class="service-content">
+                        <h3>Nearshore</h3>
+                        <p>Extendiendo el alcance de nuestros clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section class="productos" id="productos">
+        <div class="container">
+            <div class="productos-header fade-up">
+                <span class="productos-eyebrow">NUESTRAS PLATAFORMAS TECNOLÓGICAS</span>
+                <h2 class="section-title">Soluciones que transforman tu operación</h2>
+            </div>
+            <div class="productos-grid">
+                <!-- ERGON Dashboard Card -->
+                <div class="product-card fade-up">
+                    <div class="product-card-left">
+                        <div class="product-brand-header">
+                            <img src="assets/logos/ergonblanco.png" alt="ERGON" class="product-brand-icon">
+                        </div>
+                        <p class="product-card-desc">Gestión de servicios en campo con evidencia y trazabilidad total.
+                        </p>
+                        <div class="product-features-list">
+                            <div class="feature-item"><i data-lucide="check"></i><span>Evidencia fotográfica y
+                                    georreferenciada</span></div>
+                            <div class="feature-item"><i data-lucide="check"></i><span>Reportes automáticos en tiempo
+                                    real</span></div>
+                            <div class="feature-item"><i data-lucide="check"></i><span>Control y seguimiento de
+                                    actividades</span></div>
+                        </div>
+                        <a href="./ergon.html" class="btn-product-ver">
+                            Ver más <div class="arrow-circle"><i data-lucide="arrow-right"></i></div>
+                        </a>
+                    </div>
+                    <div class="product-card-right">
+                        <img src="assets/images/ergonfoto2.png" alt="ERGON Field Operations" class="product-real-image">
+                    </div>
+                </div>
+
+                <!-- HYDRA Dashboard Card -->
+                <div class="product-card fade-up" style="transition-delay: 100ms;">
+                    <div class="product-card-left">
+                        <div class="product-brand-header">
+                            <img src="assets/logos/hydrablanco.png" alt="HYDRA" class="product-brand-icon">
+                        </div>
+                        <p class="product-card-desc">Gestión integral de organismos operadores de agua.</p>
+                        <div class="product-features-list">
+                            <div class="feature-item"><i data-lucide="check"></i><span>Control operativo y
+                                    administrativo</span></div>
+                            <div class="feature-item"><i data-lucide="check"></i><span>Automatización de procesos</span>
+                            </div>
+                            <div class="feature-item"><i data-lucide="check"></i><span>Atención ciudadana
+                                    inteligente</span></div>
+                        </div>
+                        <a href="./hydra.html" class="btn-product-ver">
+                            Ver más <div class="arrow-circle"><i data-lucide="arrow-right"></i></div>
+                        </a>
+                    </div>
+                    <div class="product-card-right">
+                        <img src="assets/images/hydrafoto2.png" alt="HYDRA Water Management" class="product-real-image">
+                    </div>
+                </div>
+
+                <!-- MENTHOR Dashboard Card -->
+                <div class="product-card fade-up" style="transition-delay: 200ms;">
+                    <div class="product-card-left">
+                        <div class="product-brand-header">
+                            <img src="assets/logos/menthorblanco.png" alt="MENTHOR" class="product-brand-icon"
+                                style="height: 65px;">
+                        </div>
+                        <p class="product-card-desc">Desarrollo de talento y gestión del aprendizaje con herramientas
+                            inteligentes.</p>
+                        <div class="product-features-list">
+                            <div class="feature-item"><i data-lucide="check"></i><span>Gestión de mentorías y
+                                    capacitación estructurada</span></div>
+                            <div class="feature-item"><i data-lucide="check"></i><span>Seguimiento de habilidades y
+                                    progreso profesional</span></div>
+                            <div class="feature-item"><i data-lucide="check"></i><span>Desarrollo de talento con
+                                    procesos medibles</span></div>
+                        </div>
+                        <a href="./menthor.html" class="btn-product-ver">
+                            Ver más <div class="arrow-circle"><i data-lucide="arrow-right"></i></div>
+                        </a>
+                    </div>
+                    <div class="product-card-right">
+                        <img src="assets/images/menthorfoto2.png" alt="MENTHOR Talent Development"
+                            class="product-real-image">
+                    </div>
+                </div>
+
+                <!-- SIGE Dashboard Card -->
+                <div class="product-card fade-up" style="transition-delay: 300ms;">
+                    <div class="product-card-left">
+                        <div class="product-brand-header">
+                            <img src="assets/logos/sigeblanco.png" alt="SIGE" class="product-brand-icon">
+                        </div>
+                        <p class="product-card-desc">Gestión eficiente de la operación energética con control y
+                            automatización.</p>
+                        <div class="product-features-list">
+                            <div class="feature-item"><i data-lucide="check"></i><span>Control de volumetría y análisis
+                                    energético en tiempo real</span></div>
+                            <div class="feature-item"><i data-lucide="check"></i><span>Automatización de procesos
+                                    operativos y técnicos</span></div>
+                            <div class="feature-item"><i data-lucide="check"></i><span>Gestión comercial, facturación y
+                                    seguimiento de consumo</span></div>
+                        </div>
+                        <a href="./sige.html" class="btn-product-ver">
+                            Ver más <div class="arrow-circle"><i data-lucide="arrow-right"></i></div>
+                        </a>
+                    </div>
+                    <div class="product-card-right">
+                        <img src="assets/images/sigefoto2.png" alt="SIGE Industrial Operations"
+                            class="product-real-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación Section -->
+    <section class="ubicacion" id="ubicacion">
+        <div class="container ubicacion-layout">
+
+            <div class="ubicacion-header fade-up">
+                <span class="ubicacion-eyebrow">Presencia Geográfica</span>
+                <h2 class="ubicacion-title">Ubicación</h2>
+                <p class="ubicacion-desc">
+                    Operamos en puntos estratégicos para garantizar una cobertura eficiente y una atención cercana a
+                    nuestros clientes. Nuestra presencia nos permite implementar soluciones tecnológicas en distintos
+                    sectores y regiones, adaptándonos a las necesidades específicas de cada operación.
+
+                </p>
+
+                <div class="ubicacion-list fade-up">
+                    <div class="ubicacion-item">
+                        <i data-lucide="map-pin" class="ubicacion-icon"></i>
+                        <span class="ubicacion-city">Torreón</span>
+                    </div>
+                    <div class="ubicacion-item">
+                        <i data-lucide="map-pin" class="ubicacion-icon"></i>
+                        <span class="ubicacion-city">Monterrey</span>
+                    </div>
+                    <div class="ubicacion-item">
+                        <i data-lucide="map-pin" class="ubicacion-icon"></i>
+                        <span class="ubicacion-city">Ciudad de México</span>
+                    </div>
+                    <div class="ubicacion-item">
+                        <i data-lucide="map-pin" class="ubicacion-icon"></i>
+                        <span class="ubicacion-city">Houston</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ubicacion-map fade-up">
+                <div id="chartdiv"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container fade-up">
+            <div class="contact-layout">
+                <!-- Left Side: TextContent -->
+                <div class="contact-text">
+                    <h2 class="contact-title">Solicita información <span class="title-accent">o una demo</span></h2>
+                    <p class="contact-description">
+                        Transforma la operación de tu organización con soluciones tecnológicas diseñadas para generar
+                        resultados reales.
+                        Nuestro equipo está listo para ayudarte a identificar oportunidades, optimizar tus procesos y
+                        llevar tu gestión al siguiente nivel.
+                        Solicita información o agenda una demo personalizada y descubre cómo podemos impulsar tu
+                        operación.
+                    </p>
+                </div>
+
+                <!-- Right Side: Form Card -->
+                <div class="contact-form-card">
+                    <form class="contact-form" onsubmit="event.preventDefault();">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa">Empresa / Organización</label>
+                                <input type="text" id="empresa" placeholder="Nombre de tu empresa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cargo">Cargo</label>
+                                <input type="text" id="cargo" placeholder="Tu cargo actual" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" placeholder="Ej. +52 000 000 0000" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" placeholder="correo@empresa.com" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="interes">Tipo de interés</label>
+                                <select id="interes" required>
+                                    <option value="" disabled selected>Selecciona una plataforma</option>
+                                    <option value="hydra">Hydra</option>
+                                    <option value="ergon">Ergon</option>
+                                    <option value="menthor">Menthor</option>
+                                    <option value="sige">SIGE</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" placeholder="Describe brevemente tus necesidades..."
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-demo">Solicitar demo</button>
+                            <button type="button" class="btn btn-secondary btn-info">Recibir información</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-legal">
+                    <a href="./docs/aviso%20de%20privacidad.pdf" target="_blank">Aviso de privacidad</a>
+                    <span class="footer-sep">|</span>
+                    <a href="#">Términos y condiciones</a>
+                    <span class="footer-sep">|</span>
+                    <a href="#">Cookies</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61585215745216&locale=es_LA" target="_blank"
+                        aria-label="Facebook"><img src="assets/logos/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@MeteoraIA" target="_blank" aria-label="YouTube"><img
+                            src="assets/logos/youtube.png" alt="YouTube"></a>
+                    <a href="https://www.instagram.com/meteoraai/" target="_blank" aria-label="Instagram"><img
+                            src="assets/logos/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@meteorasolutions" target="_blank" aria-label="TikTok"><img
+                            src="assets/logos/tiktoklogo1.png" alt="TikTok"></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Meteora. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Initialize Main Logic -->
+    <script src="components/main.js"></script>
+    <script>
+        var root = am5.Root.new("chartdiv");
+
+        // =========================
+        // METEORA THEME
+        // =========================
+        var meteoraTheme = am5.Theme.new(root);
+
+        meteoraTheme.rule("InterfaceColors").setAll({
+            primaryButton: am5.color(0x1a1f3a),
+            primaryButtonHover: am5.color(0x5465FF),
+            primaryButtonDown: am5.color(0x3f50e0),
+            primaryButtonActive: am5.color(0x41D3BD),
+            primaryButtonText: am5.color(0xffffff),
+            secondaryButton: am5.color(0x14182d),
+            secondaryButtonHover: am5.color(0x1d2342),
+            secondaryButtonDown: am5.color(0x101426),
+            secondaryButtonText: am5.color(0xffffff),
+            background: am5.color(0x0a0e12),
+            text: am5.color(0xffffff)
+        });
+
+        root.setThemes([
+            am5themes_Animated.new(root),
+            meteoraTheme
+        ]);
+
+        // =========================
+        // COLOR PALETTE
+        // =========================
+        var bgDark = am5.color(0x0a0e12);
+        var ocean = am5.color(0x243f73);
+        var land = am5.color(0x14203a);
+        var border = am5.color(0x31456f);
+        var primaryBlue = am5.color(0x8EA8FF);
+        var accentTeal = am5.color(0x5465FF);
+        var softBlue = am5.color(0xDDE6FF);
+        var whiteSoft = am5.color(0xDDE3FF);
+
+        // =========================
+        // CHART
+        // =========================
+        var chart = root.container.children.push(am5map.MapChart.new(root, {
+            panX: "rotateX",
+            panY: "rotateY",
+            projection: am5map.geoOrthographic(),
+            homeGeoPoint: { longitude: -101, latitude: 26 },
+            homeZoomLevel: 1,
+            minZoomLevel: 0.8,
+            zoomLevel: 1
+        }));
+
+        // =========================
+        // BACKGROUND OCEAN
+        // =========================
+        var bgSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {}));
+        bgSeries.mapPolygons.template.setAll({
+            fill: ocean,
+            fillOpacity: 1,
+            strokeOpacity: 0
+        });
+        bgSeries.data.push({
+            geometry: am5map.getGeoRectangle(90, 180, -90, -180)
+        });
+
+        // =========================
+        // GRATICULE
+        // =========================
+        var graticuleSeries = chart.series.push(am5map.GraticuleSeries.new(root, {}));
+        graticuleSeries.mapLines.template.setAll({
+            stroke: primaryBlue,
+            strokeOpacity: 0.08,
+            strokeWidth: 0.7
+        });
+
+        // =========================
+        // COUNTRIES
+        // =========================
+        var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
+            geoJSON: am5geodata_worldLow
+        }));
+
+        polygonSeries.mapPolygons.template.setAll({
+            fill: land,
+            stroke: border,
+            strokeWidth: 0.8,
+            strokeOpacity: 0.45,
+            tooltipText: "{name}"
+        });
+
+        // Highlight Mexico + US
+        polygonSeries.events.on("datavalidated", function () {
+            am5.array.each(polygonSeries.dataItems, function (di) {
+                var id = di.get("id");
+                if (id === "MX") {
+                    di.get("mapPolygon").setAll({
+                        fill: am5.color(0x24305c)
+                    });
+                }
+                if (id === "US") {
+                    di.get("mapPolygon").setAll({
+                        fill: am5.color(0x202a4d)
+                    });
+                }
+            });
+        });
+
+        // =========================
+        // MAP SANKEY SERIES
+        // =========================
+        var sankeySeries = chart.series.push(am5map.MapSankeySeries.new(root, {
+            polygonSeries: polygonSeries,
+            maxWidth: 0.6,
+            controlPointDistance: 0.35,
+            resolution: 80,
+            nodePadding: 0.12
+        }));
+
+        sankeySeries.mapPolygons.template.setAll({
+            fill: primaryBlue,
+            fillOpacity: 0.22,
+            strokeOpacity: 0,
+            tooltipText: "{source} → {target}"
+        });
+
+        sankeySeries.nodes.mapPolygons.template.setAll({
+            fill: accentTeal,
+            stroke: softBlue,
+            strokeWidth: 1.8,
+            fillOpacity: 0.95,
+            strokeOpacity: 1,
+            tooltipText: "{name}"
+        });
+
+        // =========================
+        // BULLETS / DATA FLOW
+        // =========================
+        sankeySeries.bullets.push(function () {
+            return am5.Bullet.new(root, {
+                locationX: 0,
+                autoRotate: true,
+                autoRotateAngle: -90,
+                sprite: am5.Circle.new(root, {
+                    radius: 3,
+                    fill: accentTeal,
+                    stroke: whiteSoft,
+                    strokeWidth: 1,
+                    visible: false
+                })
+            });
+        });
+
+        sankeySeries.events.on("datavalidated", function () {
+            var maxLength = 0;
+
+            am5.array.each(sankeySeries.dataItems, function (dataItem) {
+                var len = sankeySeries.getPathLength(dataItem);
+                if (len > maxLength) maxLength = len;
+            });
+
+            var baseDuration = 7000;
+            var minDuration = 2200;
+
+            am5.array.each(sankeySeries.dataItems, function (dataItem) {
+                var pathLength = sankeySeries.getPathLength(dataItem) || maxLength;
+                var dur = maxLength > 0
+                    ? Math.max(minDuration, (pathLength / maxLength) * baseDuration)
+                    : baseDuration;
+
+                var bullets = dataItem.bullets;
+                if (bullets) {
+                    am5.array.each(bullets, function (bullet) {
+                        var randomDur = dur * (0.82 + Math.random() * 0.35);
+                        var delay = Math.random() * randomDur;
+
+                        setTimeout(function () {
+                            var sprite = bullet.get("sprite");
+                            if (sprite) sprite.set("visible", true);
+
+                            bullet.animate({
+                                key: "locationX",
+                                from: 0,
+                                to: 1,
+                                duration: randomDur,
+                                easing: am5.ease.linear,
+                                loops: Infinity
+                            });
+                        }, delay);
+                    });
+                }
+            });
+        });
+
+        // =========================
+        // CITY COORDINATES
+        // =========================
+        // MAIN HUBS
+        var torreon = { lon: -103.45, lat: 25.54 };
+        var monterrey = { lon: -100.31, lat: 25.68 };
+        var cdmx = { lon: -99.13, lat: 19.43 };
+        var houston = { lon: -95.36, lat: 29.76 };
+
+        // SECONDARY MEXICO
+        var gomezPalacio = { lon: -103.50, lat: 25.57 };
+        var chihuahua = { lon: -106.08, lat: 28.63 };
+        var durango = { lon: -104.67, lat: 24.03 };
+        var reynosa = { lon: -98.28, lat: 26.09 };
+        var sanLuisPotosi = { lon: -100.98, lat: 22.16 };
+        var tampico = { lon: -97.86, lat: 22.23 };
+        var puebla = { lon: -98.20, lat: 19.04 };
+        var queretaro = { lon: -100.39, lat: 20.59 };
+        var cuernavaca = { lon: -99.22, lat: 18.92 };
+
+        // SECONDARY USA
+        var austin = { lon: -97.74, lat: 30.27 };
+        var dallas = { lon: -96.80, lat: 32.78 };
+        var newOrleans = { lon: -90.07, lat: 29.95 }
+
+        // =========================
+        // FLOW HELPER
+        // =========================
+        function flow(src, srcName, tgt, tgtName, value, wp) {
+            var result = {
+                sourceLongitude: src.lon,
+                sourceLatitude: src.lat,
+                targetLongitude: tgt.lon,
+                targetLatitude: tgt.lat,
+                source: srcName,
+                target: tgtName,
+                value: value
+            };
+            if (wp) result.waypoints = wp;
+            return result;
+        }
+
+        // Curved routing waypoints to make paths feel more organic
+        var wpNorthMX = { longitude: -101.5, latitude: 27.8 };
+        var wpCentralMX = { longitude: -101.0, latitude: 22.8 };
+        var wpTexas = { longitude: -97.5, latitude: 28.8 };
+        var wpSouthUS = { longitude: -100.0, latitude: 30.8 };
+        var wpWestUS = { longitude: -109.0, latitude: 32.0 };
+
+        // =========================
+        // DATA NETWORK
+        // =========================
+        sankeySeries.data.setAll([
+            // Main network
+            flow(monterrey, "Monterrey", houston, "Houston", 130, [wpTexas]),
+            flow(cdmx, "Mexico City", houston, "Houston", 95, [wpSouthUS]),
+
+            // =========================
+            // TORREÓN
+            // =========================
+            flow(torreon, "Torreón", gomezPalacio, "Gómez Palacio", 60),
+            flow(torreon, "Torreón", chihuahua, "Chihuahua", 55),
+            flow(torreon, "Torreón", durango, "Durango", 50),
+
+            // =========================
+            // MONTERREY
+            // =========================
+            flow(monterrey, "Monterrey", reynosa, "Reynosa", 75),
+            flow(monterrey, "Monterrey", sanLuisPotosi, "San Luis Potosí", 70),
+            flow(monterrey, "Monterrey", tampico, "Tampico", 65),
+
+            // =========================
+            // CDMX
+            // =========================
+            flow(cdmx, "Mexico City", puebla, "Puebla", 68),
+            flow(cdmx, "Mexico City", queretaro, "Querétaro", 62),
+            flow(cdmx, "Mexico City", cuernavaca, "Cuernavaca", 58),
+
+            // =========================
+            // HOUSTON
+            // =========================
+            flow(houston, "Houston", austin, "Austin", 80),
+            flow(houston, "Houston", dallas, "Dallas", 75),
+            flow(houston, "Houston", newOrleans, "New Orleans", 70)
+        ]);
+
+        // =========================
+        // MAIN HUB GLOW MARKERS
+        // =========================
+        var pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
+
+        function addHub(city, name, isPrimary) {
+            pointSeries.pushDataItem({
+                latitude: city.lat,
+                longitude: city.lon,
+                name: name,
+                primary: isPrimary
+            });
+        }
+
+        addHub(torreon, "Torreón", true);
+        addHub(monterrey, "Monterrey", true);
+        addHub(cdmx, "Mexico City", true);
+        addHub(houston, "Houston", true);
+
+        addHub(chihuahua, "Chihuahua", false);
+        addHub(saltillo, "Saltillo", false);
+        addHub(queretaro, "Querétaro", false);
+        addHub(puebla, "Puebla", false);
+        addHub(tijuana, "Tijuana", false);
+        addHub(sanAntonio, "San Antonio", false);
+        addHub(dallas, "Dallas", false);
+        addHub(austin, "Austin", false);
+        addHub(elPaso, "El Paso", false);
+        addHub(phoenix, "Phoenix", false);
+        addHub(losAngeles, "Los Angeles", false);
+
+        pointSeries.bullets.push(function (root, series, dataItem) {
+            var context = dataItem.dataContext || {};
+            var isPrimary = !!context.primary;
+            var cityName = context.name || "";
+
+            var container = am5.Container.new(root, {});
+
+            var glow = container.children.push(am5.Circle.new(root, {
+                radius: isPrimary ? 12 : 6,
+                fill: isPrimary ? primaryBlue : accentTeal,
+                fillOpacity: isPrimary ? 0.18 : 0.1,
+                centerX: am5.p50,
+                centerY: am5.p50
+            }));
+
+            var dot = container.children.push(am5.Circle.new(root, {
+                radius: isPrimary ? 5 : 3,
+                fill: isPrimary ? accentTeal : softBlue,
+                stroke: whiteSoft,
+                strokeWidth: 1.2,
+                tooltipText: cityName,
+                centerX: am5.p50,
+                centerY: am5.p50
+            }));
+
+            if (isPrimary) {
+                glow.animate({
+                    key: "scale",
+                    from: 0.9,
+                    to: 1.35,
+                    duration: 1400,
+                    easing: am5.ease.out(am5.ease.cubic),
+                    loops: Infinity
+                });
+
+                glow.animate({
+                    key: "opacity",
+                    from: 0.45,
+                    to: 0.1,
+                    duration: 1400,
+                    easing: am5.ease.out(am5.ease.cubic),
+                    loops: Infinity
+                });
+            }
+
+            return am5.Bullet.new(root, {
+                sprite: container
+            });
+        });
+
+
+        // =========================
+        // GLOBE / MAP SWITCH
+        // =========================
+        var switchCont = chart.children.push(am5.Container.new(root, {
+            layout: root.horizontalLayout,
+            x: 20,
+            y: 40
+        }));
+
+        switchCont.children.push(am5.Label.new(root, {
+            centerY: am5.p50,
+            text: "Globe",
+            fill: whiteSoft,
+            fontSize: 13
+        }));
+
+        var switchButton = switchCont.children.push(am5.Button.new(root, {
+            themeTags: ["switch"],
+            centerY: am5.p50,
+            icon: am5.Circle.new(root, {
+                themeTags: ["icon"]
+            })
+        }));
+
+        var easing = am5.ease.inOut(am5.ease.cubic);
+        var duration = 1500;
+
+        function zoomToGlobe() {
+            chart.set("projection", am5map.geoOrthographic());
+            chart.set("panX", "rotateX");
+            chart.set("panY", "rotateY");
+            chart.animate({ key: "rotationX", to: -260, duration, easing });
+            chart.animate({ key: "rotationY", to: -25, duration, easing });
+            chart.animate({ key: "zoomLevel", to: 1.8, duration, easing });
+            bgSeries.mapPolygons.template.set("fillOpacity", 1);
+        }
+
+        function zoomToMap() {
+            chart.set("projection", am5map.geoMercator());
+            chart.set("panX", "translateX");
+            chart.set("panY", "translateY");
+            chart.animate({ key: "rotationY", to: 0, duration, easing });
+
+            setTimeout(function () {
+                chart.zoomToGeoPoint(
+                    { longitude: -101, latitude: 27 },
+                    3.2,
+                    true,
+                    duration
+                );
+            }, 100);
+
+            bgSeries.mapPolygons.template.set("fillOpacity", 0);
+        }
+
+        var fadeDuration = 300;
+
+        switchButton.on("active", function () {
+            chart.goHome(duration);
+
+            setTimeout(function () {
+                chart.seriesContainer.animate({
+                    key: "opacity",
+                    to: 0,
+                    duration: fadeDuration
+                });
+            }, duration - fadeDuration);
+
+            setTimeout(function () {
+                if (switchButton.get("active")) {
+                    zoomToMap();
+                } else {
+                    zoomToGlobe();
+                }
+
+                chart.seriesContainer.animate({
+                    key: "opacity",
+                    to: 1,
+                    duration: fadeDuration
+                });
+            }, duration);
+        });
+
+        switchCont.children.push(am5.Label.new(root, {
+            centerY: am5.p50,
+            text: "Map",
+            fill: whiteSoft,
+            fontSize: 13
+        }));
+
+        // =========================
+        // ZOOM CONTROL
+        // =========================
+        /*var zoomControl = chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
+        zoomControl.homeButton.set("visible", false);*/
+
+        // =========================
+        // APPEAR
+        // =========================
+        chart.appear(1000, 100);
+
+        setTimeout(function () {
+            zoomToGlobe();
+        }, 1000);
+    </script>
+</body>
+
+</html>
