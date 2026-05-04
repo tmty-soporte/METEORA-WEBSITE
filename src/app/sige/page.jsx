@@ -1,0 +1,164 @@
+'use client';
+import { useEffect } from 'react';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import Link from 'next/link';
+
+export default function SigePage() {
+  useEffect(() => {
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  }, []);
+
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
+        .product-hero { padding: 180px 0 100px; background: radial-gradient(circle at top right, rgba(84, 101, 255, 0.15), transparent 50%), radial-gradient(circle at bottom left, rgba(65, 211, 189, 0.1), transparent 50%), #0B0F2A; color: white; position: relative; overflow: hidden; }
+        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 5rem; align-items: center; position: relative; z-index: 10; }
+        .hero-left { max-width: 680px; display: flex; flex-direction: column; align-items: flex-start; }
+        .hero-header-block { width: 100%; display: flex; flex-direction: column; align-items: flex-start; text-align: left; margin-bottom: 0.75rem; }
+        .hero-visual-box { position: relative; aspect-ratio: 16 / 9; border-radius: 32px; overflow: hidden; box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-visual-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .product-badge { display: inline-block; padding: 0.5rem 1.25rem; background: rgba(84, 101, 255, 0.15); border: 1px solid rgba(84, 101, 255, 0.3); border-radius: 99px; color: var(--color-accent); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+        .hero-logo-img { max-width: 220px; width: 100%; height: auto; margin-bottom: 0.25rem; filter: drop-shadow(0 8px 25px rgba(84, 101, 255, 0.25)); transition: all 0.5s ease; }
+        .hero-logo-img:hover { filter: drop-shadow(0 20px 50px rgba(84, 101, 255, 0.6)); transform: scale(1.02); }
+        .product-description-container { max-width: 660px; margin-bottom: 2.25rem; }
+        .product-description-container p { font-size: 1.1rem; line-height: 1.75; color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem; }
+        .product-description-container .intro-main { font-size: 1.5rem; font-weight: 700; color: white; line-height: 1.4; margin-bottom: 1.25rem; letter-spacing: -0.5px; }
+        .product-description-container .text-highlight { color: white; font-weight: 700; }
+        .benefits-section { padding: 100px 0; background: #F8FAFC; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; align-items: stretch; }
+        @media (max-width: 1200px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px) { .benefits-grid { grid-template-columns: 1fr; } }
+        .benefit-card { background: white; padding: 3rem 2.5rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03); border: 1px solid #F1F5F9; transition: all 0.4s ease; }
+        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); }
+        .benefit-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 18px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 2rem; box-shadow: 0 10px 20px rgba(84, 101, 255, 0.2); }
+        .benefit-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 1rem; }
+        .stats-section { padding: 120px 0; background: white; position: relative; overflow: hidden; }
+        .stats-section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 0% 0%, rgba(84, 101, 255, 0.03), transparent 30%), radial-gradient(circle at 100% 100%, rgba(65, 211, 189, 0.03), transparent 30%); pointer-events: none; }
+        .stats-header { text-align: center; margin-bottom: 5rem; position: relative; z-index: 5; }
+        .stats-header h2 { font-size: 2.75rem; font-weight: 800; color: var(--color-secondary); letter-spacing: -1.5px; margin-bottom: 1.5rem; }
+        .stats-header-line { width: 80px; height: 4px; background: linear-gradient(to right, var(--color-primary), var(--color-accent)); margin: 0 auto; border-radius: 99px; }
+        .stats-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; position: relative; z-index: 5; }
+        .stat-card { background: white; padding: 3.5rem 2.5rem; border-radius: 32px; border: 1px solid #F1F5F9; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); flex: 0 1 calc(33.333% - 1.35rem); min-width: 320px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+        .stat-card:hover { transform: translateY(-12px); box-shadow: 0 30px 60px rgba(84, 101, 255, 0.1); border-color: rgba(84, 101, 255, 0.2); }
+        .stat-icon-box { width: 56px; height: 56px; background: rgba(84, 101, 255, 0.08); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--color-primary); margin-bottom: 2rem; }
+        .stat-number { font-size: 3.25rem; font-weight: 800; background: linear-gradient(135deg, var(--color-primary), #4834d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.75rem; line-height: 1.2; padding: 0.1rem 0; display: block; }
+        .stat-title { font-size: 1.25rem; font-weight: 700; color: var(--color-secondary); margin-bottom: 1rem; line-height: 1.35; }
+        .stat-desc { font-size: 1rem; color: #64748B; line-height: 1.6; }
+        @media (max-width: 992px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 3.5rem; text-align: center; }
+            .hero-left { margin: 0 auto; }
+            .hero-logo-img { margin-left: auto; margin-right: auto; }
+            .product-description-container { margin-left: auto; margin-right: auto; }
+        }
+      ` }} />
+
+      <Navbar />
+
+      <section className="product-hero">
+        <div className="container">
+          <div className="hero-grid">
+            <div className="hero-left fade-up">
+              <div className="hero-header-block">
+                <span className="product-badge">Plataforma Tecnológica</span>
+                <div className="product-hero-logo">
+                  <img src="/assets/logos/sigeblanco.png" alt="SIGE Platform" className="hero-logo-img" />
+                </div>
+              </div>
+
+              <div className="product-description-container">
+                <p className="intro-main">SIGE es una plataforma tecnológica integral que centraliza los procesos <span className="text-highlight">operativos, comerciales y técnicos</span> de empresas distribuidoras de gas natural y energía.</p>
+                <p>Permite automatizar la medición, cálculos energéticos y distribución, garantizando <span className="text-highlight">mayor control, precisión y trazabilidad</span> en la operación.</p>
+                <p>Además, optimiza la gestión comercial mediante la administración de clientes, facturación y seguimiento de consumo, facilitando la toma de decisiones con <span className="text-highlight">información confiable.</span></p>
+                <p>Con SIGE, las empresas evolucionan hacia una <span className="text-highlight">operación digital conectada</span>, eficiente y alineada a los estándares de la industria.</p>
+              </div>
+
+              <div className="hero-buttons">
+                <Link href="/#contact" className="btn btn-primary btn-lg">Solicitar demo</Link>
+              </div>
+            </div>
+
+            <div className="hero-right fade-up" style={{ transitionDelay: '200ms' }}>
+              <div className="hero-visual-box">
+                <img src="/assets/images/sige-bg.png" alt="Distribución de Energía SIGE" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="benefits-section">
+        <div className="container">
+          <div className="benefits-grid">
+            <div className="benefit-card fade-up">
+              <div className="benefit-icon"><i data-lucide="layers"></i></div>
+              <h3>Control operativo integral</h3>
+              <p>Centraliza en un solo sistema los procesos técnicos, operativos y comerciales de la empresa.</p>
+            </div>
+            <div className="benefit-card fade-up" style={{ transitionDelay: '100ms' }}>
+              <div className="benefit-icon"><i data-lucide="calculator"></i></div>
+              <h3>Medición y cálculos energéticos</h3>
+              <p>Automatiza procesos críticos con mayor precisión y confiabilidad en la operación.</p>
+            </div>
+            <div className="benefit-card fade-up" style={{ transitionDelay: '200ms' }}>
+              <div className="benefit-icon"><i data-lucide="layout"></i></div>
+              <h3>Gestión comercial conectada</h3>
+              <p>Administra clientes, facturación y seguimiento de consumo desde una sola plataforma.</p>
+            </div>
+            <div className="benefit-card fade-up" style={{ transitionDelay: '300ms' }}>
+              <div className="benefit-icon"><i data-lucide="search"></i></div>
+              <h3>Trazabilidad y toma de decisiones</h3>
+              <p>Consulta información confiable para mejorar el control, la eficiencia y la planeación operativa.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="stats-section">
+        <div className="container">
+          <div className="stats-header fade-up">
+            <h2>RESULTADOS EN CIFRAS</h2>
+            <div className="stats-header-line"></div>
+          </div>
+
+          <div className="stats-grid">
+            <div className="stat-card fade-up">
+              <div className="stat-icon-box"><i data-lucide="shield-check"></i></div>
+              <div className="stat-number">100%</div>
+              <h3 className="stat-title">Control total</h3>
+              <p className="stat-desc">Precisión absoluta en volumetría y cálculos energéticos estratégicos.</p>
+            </div>
+            <div className="stat-card fade-up" style={{ transitionDelay: '100ms' }}>
+              <div className="stat-icon-box"><i data-lucide="alert-circle"></i></div>
+              <div className="stat-number">-80%</div>
+              <h3 className="stat-title">Reducción de errores</h3>
+              <p className="stat-desc">Disminución drástica de fallas humanas y operativas en los procesos.</p>
+            </div>
+            <div className="stat-card fade-up" style={{ transitionDelay: '200ms' }}>
+              <div className="stat-icon-box"><i data-lucide="zap"></i></div>
+              <div className="stat-number">Tiempo real</div>
+              <h3 className="stat-title">Automatización ágil</h3>
+              <p className="stat-desc">Ejecución inmediata de procesos críticos y flujos de trabajo operativos.</p>
+            </div>
+            <div className="stat-card fade-up" style={{ transitionDelay: '300ms' }}>
+              <div className="stat-icon-box"><i data-lucide="trending-up"></i></div>
+              <div className="stat-number">+ Eficiencia</div>
+              <h3 className="stat-title">Impacto financiero</h3>
+              <p className="stat-desc">Incremento tangible en la rentabilidad y el control financiero operativo.</p>
+            </div>
+            <div className="stat-card fade-up" style={{ transitionDelay: '400ms' }}>
+              <div className="stat-icon-box"><i data-lucide="eye"></i></div>
+              <div className="stat-number">Trazabilidad total</div>
+              <h3 className="stat-title">Información confiable</h3>
+              <p className="stat-desc">Visibilidad completa de cada movimiento en toda la cadena de operación.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}

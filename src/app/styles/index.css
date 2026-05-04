@@ -1,4 +1,4 @@
-@import url('variables.css');
+@import './variables.css';
 
 /* CSS Reset and Base Styles */
 * {
@@ -10,6 +10,12 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+}
+
+svg.lucide {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: middle;
 }
 
 body {
@@ -797,6 +803,15 @@ section {
   transform: scale(1.12) rotate(4deg);
   box-shadow: 0 15px 30px rgba(84, 101, 255, 0.4);
 }
+
+/* FIX PARA NEXT.JS: Forzar visibilidad de elementos fade-up temporalmente
+   hasta que se implemente Intersection Observer en React */
+.fade-up {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  visibility: visible !important;
+}
+
 
 .service-icon-box i {
   width: 28px;
