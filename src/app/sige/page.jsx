@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import AnimatedCounter from '../../components/AnimatedCounter';
 
 export default function SigePage() {
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function SigePage() {
         @media (max-width: 1200px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 640px) { .benefits-grid { grid-template-columns: 1fr; } }
         .benefit-card { background: white; padding: 3rem 2.5rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03); border: 1px solid #F1F5F9; transition: all 0.4s ease; }
-        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); }
+        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(84, 101, 255, 0.15), 0 0 0 1px #5465FF; }
         .benefit-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 18px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 2rem; box-shadow: 0 10px 20px rgba(84, 101, 255, 0.2); }
         .benefit-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 1rem; }
         .stats-section { padding: 120px 0; background: white; position: relative; overflow: hidden; }
@@ -60,8 +61,8 @@ export default function SigePage() {
       <section className="product-hero">
         <div className="container">
           <div className="hero-grid">
-            <div className="hero-left fade-up">
-              <div className="hero-header-block">
+            <div className="hero-left">
+              <div className="hero-header-block reveal fade-up">
                 <span className="product-badge">Plataforma Tecnológica</span>
                 <div className="product-hero-logo">
                   <img src="/assets/logos/sigeblanco.png" alt="SIGE Platform" className="hero-logo-img" />
@@ -69,18 +70,18 @@ export default function SigePage() {
               </div>
 
               <div className="product-description-container">
-                <p className="intro-main">SIGE es una plataforma tecnológica integral que centraliza los procesos <span className="text-highlight">operativos, comerciales y técnicos</span> de empresas distribuidoras de gas natural y energía.</p>
-                <p>Permite automatizar la medición, cálculos energéticos y distribución, garantizando <span className="text-highlight">mayor control, precisión y trazabilidad</span> en la operación.</p>
-                <p>Además, optimiza la gestión comercial mediante la administración de clientes, facturación y seguimiento de consumo, facilitando la toma de decisiones con <span className="text-highlight">información confiable.</span></p>
-                <p>Con SIGE, las empresas evolucionan hacia una <span className="text-highlight">operación digital conectada</span>, eficiente y alineada a los estándares de la industria.</p>
+                <p className="intro-main reveal fade-up delay-100">SIGE es una plataforma tecnológica integral que centraliza los procesos <span className="text-highlight">operativos, comerciales y técnicos</span> de empresas distribuidoras de gas natural y energía.</p>
+                <p className="reveal fade-up delay-200">Permite automatizar la medición, cálculos energéticos y distribución, garantizando <span className="text-highlight">mayor control, precisión y trazabilidad</span> en la operación.</p>
+                <p className="reveal fade-up delay-300">Además, optimiza la gestión comercial mediante la administración de clientes, facturación y seguimiento de consumo, facilitando la toma de decisiones con <span className="text-highlight">información confiable.</span></p>
+                <p className="reveal fade-up delay-400">Con SIGE, las empresas evolucionan hacia una <span className="text-highlight">operación digital conectada</span>, eficiente y alineada a los estándares de la industria.</p>
               </div>
 
-              <div className="hero-buttons">
+              <div className="hero-buttons reveal fade-up delay-500">
                 <Link href="/#contact" className="btn btn-primary btn-lg">Solicitar demo</Link>
               </div>
             </div>
 
-            <div className="hero-right fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="hero-right reveal fade-left delay-300">
               <div className="hero-visual-box">
                 <img src="/assets/images/sige-bg.png" alt="Distribución de Energía SIGE" />
               </div>
@@ -92,22 +93,22 @@ export default function SigePage() {
       <section className="benefits-section">
         <div className="container">
           <div className="benefits-grid">
-            <div className="benefit-card fade-up">
+            <div className="benefit-card reveal scale-up">
               <div className="benefit-icon"><i data-lucide="layers"></i></div>
               <h3>Control operativo integral</h3>
               <p>Centraliza en un solo sistema los procesos técnicos, operativos y comerciales de la empresa.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '100ms' }}>
+            <div className="benefit-card reveal scale-up delay-100">
               <div className="benefit-icon"><i data-lucide="calculator"></i></div>
               <h3>Medición y cálculos energéticos</h3>
               <p>Automatiza procesos críticos con mayor precisión y confiabilidad en la operación.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="benefit-card reveal scale-up delay-200">
               <div className="benefit-icon"><i data-lucide="layout"></i></div>
               <h3>Gestión comercial conectada</h3>
               <p>Administra clientes, facturación y seguimiento de consumo desde una sola plataforma.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '300ms' }}>
+            <div className="benefit-card reveal scale-up delay-300">
               <div className="benefit-icon"><i data-lucide="search"></i></div>
               <h3>Trazabilidad y toma de decisiones</h3>
               <p>Consulta información confiable para mejorar el control, la eficiencia y la planeación operativa.</p>
@@ -118,39 +119,39 @@ export default function SigePage() {
 
       <section className="stats-section">
         <div className="container">
-          <div className="stats-header fade-up">
+          <div className="stats-header reveal fade-up">
             <h2>RESULTADOS EN CIFRAS</h2>
             <div className="stats-header-line"></div>
           </div>
 
           <div className="stats-grid">
-            <div className="stat-card fade-up">
+            <div className="stat-card reveal fade-up">
               <div className="stat-icon-box"><i data-lucide="shield-check"></i></div>
-              <div className="stat-number">100%</div>
+              <div className="stat-number"><AnimatedCounter value="100%" /></div>
               <h3 className="stat-title">Control total</h3>
               <p className="stat-desc">Precisión absoluta en volumetría y cálculos energéticos estratégicos.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '100ms' }}>
+            <div className="stat-card reveal fade-up delay-100">
               <div className="stat-icon-box"><i data-lucide="alert-circle"></i></div>
-              <div className="stat-number">-80%</div>
+              <div className="stat-number"><AnimatedCounter value="-80%" /></div>
               <h3 className="stat-title">Reducción de errores</h3>
               <p className="stat-desc">Disminución drástica de fallas humanas y operativas en los procesos.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="stat-card reveal fade-up delay-200">
               <div className="stat-icon-box"><i data-lucide="zap"></i></div>
-              <div className="stat-number">Tiempo real</div>
+              <div className="stat-number"><AnimatedCounter value="Tiempo real" /></div>
               <h3 className="stat-title">Automatización ágil</h3>
               <p className="stat-desc">Ejecución inmediata de procesos críticos y flujos de trabajo operativos.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '300ms' }}>
+            <div className="stat-card reveal fade-up delay-300">
               <div className="stat-icon-box"><i data-lucide="trending-up"></i></div>
-              <div className="stat-number">+ Eficiencia</div>
+              <div className="stat-number"><AnimatedCounter value="+ Eficiencia" /></div>
               <h3 className="stat-title">Impacto financiero</h3>
               <p className="stat-desc">Incremento tangible en la rentabilidad y el control financiero operativo.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '400ms' }}>
+            <div className="stat-card reveal fade-up delay-400">
               <div className="stat-icon-box"><i data-lucide="eye"></i></div>
-              <div className="stat-number">Trazabilidad total</div>
+              <div className="stat-number"><AnimatedCounter value="Trazabilidad total" /></div>
               <h3 className="stat-title">Información confiable</h3>
               <p className="stat-desc">Visibilidad completa de cada movimiento en toda la cadena de operación.</p>
             </div>

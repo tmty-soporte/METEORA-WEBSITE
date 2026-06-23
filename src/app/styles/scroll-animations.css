@@ -1,0 +1,129 @@
+/* --- GLOBAL SCROLL ANIMATIONS --- */
+
+.reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Starting States */
+.reveal.fade-up {
+  transform: translateY(30px);
+}
+
+.reveal.fade-left {
+  transform: translateX(-30px);
+}
+
+.reveal.fade-right {
+  transform: translateX(30px);
+}
+
+.reveal.scale-up {
+  transform: scale(0.95);
+}
+
+/* Active State */
+.reveal.active {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Stagger Utilities */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+
+/* Navbar Hover & Scroll Styles */
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: linear-gradient(90deg, #5465FF, #41D3BD);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  opacity: 0;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.nav-btn-cta::after {
+  display: none; /* No underline for CTA button */
+}
+
+/* -------------------------------------
+   Specific Section Hover & Polish Effects
+------------------------------------- */
+
+/* Servicios Hover */
+.service-card {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -10px rgba(84, 101, 255, 0.15), 0 0 20px rgba(65, 211, 189, 0.1);
+}
+.service-card:hover .service-icon-box {
+  animation: subtleFloat 3s ease-in-out infinite alternate;
+}
+
+/* Products Hover */
+.product-card-right img {
+  animation: subtleFloat 6s ease-in-out infinite alternate;
+}
+.btn-product-ver {
+  transition: all 0.3s ease;
+}
+.btn-product-ver:hover {
+  text-shadow: 0 0 10px rgba(84, 101, 255, 0.5);
+}
+.btn-product-ver:hover .arrow-circle {
+  transform: translateX(4px);
+  box-shadow: 0 0 15px rgba(65, 211, 189, 0.4);
+}
+
+/* AmCharts Map Connection Pulses */
+.amcharts-MapLine {
+  stroke-dasharray: 5;
+  animation: lineDash 20s linear infinite;
+  filter: drop-shadow(0 0 4px rgba(65, 211, 189, 0.6));
+}
+
+@keyframes lineDash {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes subtleFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+/* Contact form inputs focus glow */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  box-shadow: 0 0 15px rgba(84, 101, 255, 0.2);
+  border-color: #5465FF;
+  outline: none;
+}
+
+/* Buttons hover / press */
+.btn-primary:active {
+  transform: translateY(1px) scale(0.98);
+}

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import AnimatedCounter from '../../components/AnimatedCounter';
 
 export default function HydraPage() {
   useEffect(() => {
@@ -48,7 +49,7 @@ export default function HydraPage() {
         @media (max-width: 1200px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 640px) { .benefits-grid { grid-template-columns: 1fr; } }
         .benefit-card { background: white; padding: 3rem 2.5rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03); border: 1px solid #F1F5F9; transition: all 0.4s ease; }
-        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); }
+        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(84, 101, 255, 0.15), 0 0 0 1px #5465FF; }
         .benefit-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 18px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 2rem; box-shadow: 0 10px 20px rgba(84, 101, 255, 0.2); }
         .benefit-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 1rem; }
         @media (max-width: 992px) {
@@ -72,8 +73,8 @@ export default function HydraPage() {
       <section className="product-hero">
         <div className="container">
           <div className="hero-grid">
-            <div className="hero-left fade-up">
-              <div className="hero-header-block">
+            <div className="hero-left">
+              <div className="hero-header-block reveal fade-up">
                 <span className="product-badge">Plataforma Tecnológica</span>
                 <div className="product-hero-logo">
                   <img src="/assets/logos/hydrablanco.png" alt="HYDRA Platform" className="hero-logo-img" />
@@ -81,21 +82,21 @@ export default function HydraPage() {
               </div>
 
               <div className="product-description-container">
-                <p className="intro-main">HYDRA es nuestra plataforma tecnológica diseñada para modernizar la gestión de organismos operadores de agua, integrando en un solo sistema el <span className="text-highlight">control operativo, la gestión comercial y la atención al usuario.</span></p>
-                <p>Permite automatizar procesos, eliminar tareas manuales y tener <span className="text-highlight">visibilidad en tiempo real</span> de toda la operación, facilitando decisiones más rápidas y estratégicas.</p>
-                <div className="intro-quote">
+                <p className="intro-main reveal fade-up delay-100">HYDRA es nuestra plataforma tecnológica diseñada para modernizar la gestión de organismos operadores de agua, integrando en un solo sistema el <span className="text-highlight">control operativo, la gestión comercial y la atención al usuario.</span></p>
+                <p className="reveal fade-up delay-200">Permite automatizar procesos, eliminar tareas manuales y tener <span className="text-highlight">visibilidad en tiempo real</span> de toda la operación, facilitando decisiones más rápidas y estratégicas.</p>
+                <div className="intro-quote reveal fade-up delay-300">
                   Conecta desde el trabajo en campo hasta la facturación y el cobro,
                   <span>incluyendo lectura inteligente, facturación masiva y pagos digitales.</span>
                 </div>
-                <p>Además, mejora la experiencia del usuario al permitir consultas, acceso a recibos y <span className="text-highlight">pagos en línea 24/7</span>, de forma rápida y segura.</p>
+                <p className="reveal fade-up delay-400">Además, mejora la experiencia del usuario al permitir consultas, acceso a recibos y <span className="text-highlight">pagos en línea 24/7</span>, de forma rápida y segura.</p>
               </div>
 
-              <div className="hero-buttons">
+              <div className="hero-buttons reveal fade-up delay-500">
                 <Link href="/#contact" className="btn btn-primary btn-lg">Solicitar demo</Link>
               </div>
             </div>
 
-            <div className="hero-right fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="hero-right reveal fade-left delay-300">
               <div className="hero-visual-box">
                 <img src="/assets/images/hydra-bg.png" alt="Gestión de Agua HYDRA" />
               </div>
@@ -107,22 +108,22 @@ export default function HydraPage() {
       <section className="benefits-section">
         <div className="container">
           <div className="benefits-grid">
-            <div className="benefit-card fade-up">
+            <div className="benefit-card reveal scale-up">
               <div className="benefit-icon"><i data-lucide="droplets"></i></div>
               <h3>Lecturas en tiempo real</h3>
               <p>Captura y consulta lecturas con mayor precisión y visibilidad operativa.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '100ms' }}>
+            <div className="benefit-card reveal scale-up delay-100">
               <div className="benefit-icon"><i data-lucide="file-text"></i></div>
               <h3>Facturación automatizada</h3>
               <p>Genera recibos y procesos de cobro de forma más rápida y sin errores.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="benefit-card reveal scale-up delay-200">
               <div className="benefit-icon"><i data-lucide="users"></i></div>
               <h3>Control comercial</h3>
               <p>Administra usuarios, consumos, adeudos y procesos comerciales desde un solo lugar.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '300ms' }}>
+            <div className="benefit-card reveal scale-up delay-300">
               <div className="benefit-icon"><i data-lucide="bar-chart-3"></i></div>
               <h3>Reportes inteligentes</h3>
               <p>Accede a indicadores, estadísticas y reportes automáticos para tomar decisiones.</p>
@@ -133,39 +134,39 @@ export default function HydraPage() {
 
       <section className="stats-section">
         <div className="container">
-          <div className="stats-header fade-up">
+          <div className="stats-header reveal fade-up">
             <h2>NÚMEROS EN CIFRAS</h2>
             <div className="stats-header-line"></div>
           </div>
 
           <div className="stats-grid">
-            <div className="stat-card fade-up">
+            <div className="stat-card reveal fade-up">
               <div className="stat-icon-box"><i data-lucide="file-text"></i></div>
-              <div className="stat-number">Hasta 60,000</div>
+              <div className="stat-number"><AnimatedCounter value="Hasta 60,000" /></div>
               <h3 className="stat-title">Cuentas facturadas en minutos</h3>
               <p className="stat-desc">Agiliza los procesos de cobro masivo con total precisión y eficiencia digital.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '100ms' }}>
+            <div className="stat-card reveal fade-up delay-100">
               <div className="stat-icon-box"><i data-lucide="map-pin"></i></div>
-              <div className="stat-number">100%</div>
+              <div className="stat-number"><AnimatedCounter value="100%" /></div>
               <h3 className="stat-title">Trazabilidad con GPS en campo</h3>
               <p className="stat-desc">Control total de la ubicación y actividades de tus cuadrillas en tiempo real.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="stat-card reveal fade-up delay-200">
               <div className="stat-icon-box"><i data-lucide="clock"></i></div>
-              <div className="stat-number">-70%</div>
+              <div className="stat-number"><AnimatedCounter value="-70%" /></div>
               <h3 className="stat-title">Reducción de tiempos operativos</h3>
               <p className="stat-desc">Optimización drástica de flujos de trabajo y procesos de supervisión técnica.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '300ms' }}>
+            <div className="stat-card reveal fade-up delay-300">
               <div className="stat-icon-box"><i data-lucide="trending-up"></i></div>
-              <div className="stat-number">+ Recaudación</div>
+              <div className="stat-number"><AnimatedCounter value="+ Recaudación" /></div>
               <h3 className="stat-title">Incremento en control financiero</h3>
               <p className="stat-desc">Mejora la salud financiera del organismo con herramientas de cobro inteligentes.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '400ms' }}>
+            <div className="stat-card reveal fade-up delay-400">
               <div className="stat-icon-box"><i data-lucide="activity"></i></div>
-              <div className="stat-number">24/7</div>
+              <div className="stat-number"><AnimatedCounter value="24/7" /></div>
               <h3 className="stat-title">Operación sin interrupciones</h3>
               <p className="stat-desc">Plataforma siempre disponible para garantizar la continuidad del servicio a usuarios.</p>
             </div>
@@ -175,7 +176,7 @@ export default function HydraPage() {
 
       <section className="video-section" style={{ padding: '0 0 140px', background: 'white' }}>
         <div className="container">
-          <div className="stats-videos-container fade-up" style={{ transitionDelay: '200ms' }}>
+          <div className="stats-videos-container reveal fade-up delay-200">
             <div className="stats-videos-grid">
               <div className="video-box">
                 <video className="stats-video" controls playsInline>

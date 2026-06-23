@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import AnimatedCounter from '../../components/AnimatedCounter';
 
 export default function ErgonPage() {
   useEffect(() => {
@@ -24,7 +25,7 @@ export default function ErgonPage() {
         .hero-visual-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .sector-buttons-group { display: flex; flex-direction: column; gap: 1rem; }
         .btn-sector { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.75rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; color: white; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; }
-        .btn-sector:hover { background: rgba(84, 101, 255, 0.15); border-color: var(--color-primary); transform: translateX(8px); }
+        .btn-sector:hover { background: rgba(84, 101, 255, 0.15); border-color: var(--color-primary); transform: translateX(8px); box-shadow: 0 0 20px rgba(84, 101, 255, 0.2); }
         .btn-sector i { width: 18px; height: 18px; opacity: 0.5; transition: all 0.3s ease; }
         .btn-sector:hover i { opacity: 1; transform: translateX(4px); color: var(--color-accent); }
         .product-badge { display: inline-block; padding: 0.5rem 1.25rem; background: rgba(84, 101, 255, 0.15); border: 1px solid rgba(84, 101, 255, 0.3); border-radius: 99px; color: var(--color-accent); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
@@ -43,7 +44,7 @@ export default function ErgonPage() {
         @media (max-width: 1200px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 640px) { .benefits-grid { grid-template-columns: 1fr; } }
         .benefit-card { background: white; padding: 3rem 2.5rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03); border: 1px solid #F1F5F9; transition: all 0.4s ease; }
-        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); }
+        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(84, 101, 255, 0.15), 0 0 0 1px #5465FF; }
         .benefit-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 18px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 2rem; box-shadow: 0 10px 20px rgba(84, 101, 255, 0.2); }
         .benefit-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 1rem; }
         .product-visual { padding: 100px 0; background: white; text-align: center; }
@@ -90,8 +91,8 @@ export default function ErgonPage() {
       <section className="product-hero">
         <div className="container">
           <div className="hero-grid">
-            <div className="hero-left fade-up">
-              <div className="hero-header-block">
+            <div className="hero-left">
+              <div className="hero-header-block reveal fade-up">
                 <span className="product-badge">Plataforma Tecnológica</span>
                 <div className="product-hero-logo">
                   <img src="/assets/logos/ergonblanco.png" alt="ERGON Platform" className="hero-logo-img" />
@@ -99,42 +100,42 @@ export default function ErgonPage() {
               </div>
 
               <div className="product-description-container">
-                <p className="intro-main"><span className="text-highlight">ERGON</span> es la plataforma que transforma la manera en la que operan las organizaciones en campo.</p>
-                <p>Deja atrás la falta de control, los reportes manuales y la incertidumbre, y comienza a <span className="text-highlight">gestionar todo en tiempo real</span> desde un solo lugar.</p>
-                <p>Con ERGON sabes exactamente qué está pasando, dónde y cuándo.</p>
-                <p>Supervisa a tus equipos, valida cada actividad con <span className="text-highlight">evidencia</span> y toma decisiones con información confiable al instante.</p>
-                <p>Optimiza rutas, mejora tiempos de respuesta, elimina errores operativos y aumenta la <span className="text-highlight">productividad</span> de tu personal sin complicaciones.</p>
-                <div className="intro-quote">
+                <p className="intro-main reveal fade-up delay-100"><span className="text-highlight">ERGON</span> es la plataforma que transforma la manera en la que operan las organizaciones en campo.</p>
+                <p className="reveal fade-up delay-200">Deja atrás la falta de control, los reportes manuales y la incertidumbre, y comienza a <span className="text-highlight">gestionar todo en tiempo real</span> desde un solo lugar.</p>
+                <p className="reveal fade-up delay-200">Con ERGON sabes exactamente qué está pasando, dónde y cuándo.</p>
+                <p className="reveal fade-up delay-300">Supervisa a tus equipos, valida cada actividad con <span className="text-highlight">evidencia</span> y toma decisiones con información confiable al instante.</p>
+                <p className="reveal fade-up delay-300">Optimiza rutas, mejora tiempos de respuesta, elimina errores operativos y aumenta la <span className="text-highlight">productividad</span> de tu personal sin complicaciones.</p>
+                <div className="intro-quote reveal fade-up delay-400">
                   Ya no se trata solo de trabajar más…
                   <span>se trata de trabajar mejor, con control y resultados medibles.</span>
                 </div>
-                <p>ERGON se adapta a tu operación, ya sea en gobierno, agua, infraestructura o empresas privadas, ayudándote a <span className="text-highlight">hacer más con menos.</span></p>
+                <p className="reveal fade-up delay-500">ERGON se adapta a tu operación, ya sea en gobierno, agua, infraestructura o empresas privadas, ayudándote a <span className="text-highlight">hacer más con menos.</span></p>
               </div>
 
-              <div className="hero-buttons">
+              <div className="hero-buttons reveal fade-up delay-600">
                 <Link href="/#contact" className="btn btn-primary btn-lg">Solicitar demo gratis</Link>
               </div>
             </div>
 
-            <div className="hero-right fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="hero-right reveal fade-left delay-300">
               <div className="hero-visual-box">
                 <img src="/assets/images/ergonfoto3.png" alt="Campo de Operaciones ERGON" />
               </div>
 
               <div className="sector-buttons-group">
-                <Link href="/ergon/infraestructura" className="btn-sector">
+                <Link href="/ergon/infraestructura" className="btn-sector reveal fade-left delay-400">
                   <span>Ergon Infraestructura</span>
                   <i data-lucide="arrow-right"></i>
                 </Link>
-                <Link href="/ergon/agua-medio-ambiente" className="btn-sector">
+                <Link href="/ergon/agua-medio-ambiente" className="btn-sector reveal fade-left delay-500">
                   <span>Ergon Agua y Medio Ambiente</span>
                   <i data-lucide="arrow-right"></i>
                 </Link>
-                <Link href="/ergon/seguridad-publica" className="btn-sector">
+                <Link href="/ergon/seguridad-publica" className="btn-sector reveal fade-left delay-600">
                   <span>Ergon Seguridad Pública</span>
                   <i data-lucide="arrow-right"></i>
                 </Link>
-                <Link href="/ergon/empresas-privadas" className="btn-sector">
+                <Link href="/ergon/empresas-privadas" className="btn-sector reveal fade-left delay-600">
                   <span>Ergon Empresas Privadas</span>
                   <i data-lucide="arrow-right"></i>
                 </Link>
@@ -147,22 +148,22 @@ export default function ErgonPage() {
       <section className="benefits-section">
         <div className="container">
           <div className="benefits-grid">
-            <div className="benefit-card fade-up">
+            <div className="benefit-card reveal scale-up">
               <div className="benefit-icon"><i data-lucide="activity"></i></div>
               <h3>Monitoreo en tiempo real</h3>
               <p>Visualiza el estado de cada servicio y la ubicación de tus cuadrillas al instante.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '100ms' }}>
+            <div className="benefit-card reveal scale-up delay-100">
               <div className="benefit-icon"><i data-lucide="camera"></i></div>
               <h3>Evidencia fotográfica</h3>
               <p>Captura evidencia visual del antes y después de cada trabajo realizado en campo.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="benefit-card reveal scale-up delay-200">
               <div className="benefit-icon"><i data-lucide="users"></i></div>
               <h3>Control de brigadas</h3>
               <p>Asigna tareas y gestiona equipos de trabajo con máxima eficiencia y trazabilidad.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '300ms' }}>
+            <div className="benefit-card reveal scale-up delay-300">
               <div className="benefit-icon"><i data-lucide="file-text"></i></div>
               <h3>Reportes automáticos</h3>
               <p>Genera informes de servicio y estadísticas de desempeño con un solo clic.</p>
@@ -173,44 +174,44 @@ export default function ErgonPage() {
 
       <section className="stats-section">
         <div className="container">
-          <div className="stats-header fade-up">
+          <div className="stats-header reveal fade-up">
             <h2>RESULTADOS EN CIFRAS</h2>
             <div className="stats-header-line"></div>
           </div>
 
           <div className="stats-grid">
-            <div className="stat-card fade-up">
+            <div className="stat-card reveal fade-up">
               <div className="stat-icon-box"><i data-lucide="map-pin"></i></div>
-              <div className="stat-number">100%</div>
+              <div className="stat-number"><AnimatedCounter value="100%" /></div>
               <h3 className="stat-title">Visibilidad de tu operación en tiempo real</h3>
               <p className="stat-desc">Sabe exactamente dónde está tu equipo y qué está haciendo en todo momento para una gestión impecable.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '100ms' }}>
+            <div className="stat-card reveal fade-up delay-100">
               <div className="stat-icon-box"><i data-lucide="clock"></i></div>
-              <div className="stat-number">-60%</div>
+              <div className="stat-number"><AnimatedCounter value="-60%" /></div>
               <h3 className="stat-title">Reducción en tiempos de supervisión</h3>
               <p className="stat-desc">Elimina recorridos innecesarios y centraliza todo el control táctico desde la plataforma unificada.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="stat-card reveal fade-up delay-200">
               <div className="stat-icon-box"><i data-lucide="camera"></i></div>
-              <div className="stat-number">+90%</div>
+              <div className="stat-number"><AnimatedCounter value="+90%" /></div>
               <h3 className="stat-title">Actividades validadas con evidencia digital</h3>
               <p className="stat-desc">Fotos, ubicación y registros en tiempo real que respaldan cada acción con total transparencia.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '300ms' }}>
+            <div className="stat-card reveal fade-up delay-300">
               <div className="stat-icon-box"><i data-lucide="dollar-sign"></i></div>
-              <div className="stat-number">-30%</div>
+              <div className="stat-number"><AnimatedCounter value="-30%" /></div>
               <h3 className="stat-title">Disminución de costos operativos</h3>
               <p className="stat-desc">Menos errores, menos retrabajo y un mejor uso de los recursos críticos de tu organización.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '400ms' }}>
+            <div className="stat-card reveal fade-up delay-400">
               <div className="stat-icon-box"><i data-lucide="trending-up"></i></div>
-              <div className="stat-number">+50%</div>
+              <div className="stat-number"><AnimatedCounter value="+50%" /></div>
               <h3 className="stat-title">Mejora en la toma de decisiones</h3>
               <p className="stat-desc">Datos claros, reportes automáticos y control total para actuar al instante con información real.</p>
             </div>
           </div>
-          <div className="stats-videos-container fade-up" style={{ transitionDelay: '200ms' }}>
+          <div className="stats-videos-container reveal fade-up delay-200">
             <div className="stats-videos-grid">
               <div className="video-box">
                 <video className="stats-video" controls playsInline>
@@ -231,7 +232,7 @@ export default function ErgonPage() {
 
       <section className="product-cta">
         <div className="container">
-          <div className="cta-flex fade-up">
+          <div className="cta-flex reveal fade-up">
             <h2>Lleva el control total de tus operaciones en campo</h2>
             <p>Optimiza tu operación, mejora la visibilidad en campo y toma decisiones con datos en tiempo real.</p>
             <Link href="/#contact" className="btn btn-primary btn-lg">Solicitar demo ahora</Link>

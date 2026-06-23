@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import AnimatedCounter from '../../components/AnimatedCounter';
 
 export default function MenthorPage() {
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function MenthorPage() {
         @media (max-width: 1200px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 640px) { .benefits-grid { grid-template-columns: 1fr; } }
         .benefit-card { background: white; padding: 3rem 2.5rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03); border: 1px solid #F1F5F9; transition: all 0.4s ease; }
-        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); }
+        .benefit-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(84, 101, 255, 0.15), 0 0 0 1px #5465FF; }
         .benefit-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 18px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 2rem; box-shadow: 0 10px 20px rgba(84, 101, 255, 0.2); }
         .benefit-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 1rem; }
         .stats-section { padding: 120px 0; background: white; position: relative; overflow: hidden; }
@@ -60,8 +61,8 @@ export default function MenthorPage() {
       <section className="product-hero">
         <div className="container">
           <div className="hero-grid">
-            <div className="hero-left fade-up">
-              <div className="hero-header-block">
+            <div className="hero-left">
+              <div className="hero-header-block reveal fade-up">
                 <span className="product-badge">Plataforma Tecnológica</span>
                 <div className="product-hero-logo">
                   <img src="/assets/logos/menthorblanco.png" alt="MENTHOR Platform" className="hero-logo-img" />
@@ -69,17 +70,17 @@ export default function MenthorPage() {
               </div>
 
               <div className="product-description-container">
-                <p className="intro-main">Menthor es una plataforma digital diseñada para optimizar el desarrollo de talento dentro de organizaciones, centralizando procesos de <span className="text-highlight">mentoría, capacitación y seguimiento profesional</span> en un solo entorno.</p>
-                <p>A través de herramientas inteligentes, permite estructurar el aprendizaje, dar visibilidad al progreso de los usuarios y <span className="text-highlight">tomar decisiones basadas en datos</span>, eliminando la desorganización y mejorando la eficiencia en la gestión del conocimiento.</p>
-                <p>Menthor impulsa una <span className="text-highlight">cultura de crecimiento continuo</span>, facilitando la evolución de personas y equipos, y convirtiendo el talento en resultados medibles para las organizaciones.</p>
+                <p className="intro-main reveal fade-up delay-100">Menthor es una plataforma digital diseñada para optimizar el desarrollo de talento dentro de organizaciones, centralizando procesos de <span className="text-highlight">mentoría, capacitación y seguimiento profesional</span> en un solo entorno.</p>
+                <p className="reveal fade-up delay-200">A través de herramientas inteligentes, permite estructurar el aprendizaje, dar visibilidad al progreso de los usuarios y <span className="text-highlight">tomar decisiones basadas en datos</span>, eliminando la desorganización y mejorando la eficiencia en la gestión del conocimiento.</p>
+                <p className="reveal fade-up delay-300">Menthor impulsa una <span className="text-highlight">cultura de crecimiento continuo</span>, facilitando la evolución de personas y equipos, y convirtiendo el talento en resultados medibles para las organizaciones.</p>
               </div>
 
-              <div className="hero-buttons">
+              <div className="hero-buttons reveal fade-up delay-400">
                 <Link href="/#contact" className="btn btn-primary btn-lg">Solicitar demo</Link>
               </div>
             </div>
 
-            <div className="hero-right fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="hero-right reveal fade-left delay-300">
               <div className="hero-visual-box">
                 <img src="/assets/images/menthor-bg.png" alt="Desarrollo de Talento MENTHOR" />
               </div>
@@ -91,22 +92,22 @@ export default function MenthorPage() {
       <section className="benefits-section">
         <div className="container">
           <div className="benefits-grid">
-            <div className="benefit-card fade-up">
+            <div className="benefit-card reveal scale-up">
               <div className="benefit-icon"><i data-lucide="users-2"></i></div>
               <h3>Mentoría centralizada</h3>
               <p>Gestiona procesos de mentoría dentro de una sola plataforma, con mayor orden y claridad.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '100ms' }}>
+            <div className="benefit-card reveal scale-up delay-100">
               <div className="benefit-icon"><i data-lucide="book-open"></i></div>
               <h3>Capacitación estructurada</h3>
               <p>Organiza contenidos, rutas de aprendizaje y procesos de formación profesional de forma más eficiente.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="benefit-card reveal scale-up delay-200">
               <div className="benefit-icon"><i data-lucide="line-chart"></i></div>
               <h3>Seguimiento del progreso</h3>
               <p>Da visibilidad al avance de los usuarios en tiempo real y facilita el acompañamiento continuo.</p>
             </div>
-            <div className="benefit-card fade-up" style={{ transitionDelay: '300ms' }}>
+            <div className="benefit-card reveal scale-up delay-300">
               <div className="benefit-icon"><i data-lucide="database"></i></div>
               <h3>Gestión basada en datos</h3>
               <p>Obtén información clara para mejorar decisiones sobre talento, desarrollo y desempeño profesional.</p>
@@ -117,39 +118,39 @@ export default function MenthorPage() {
 
       <section className="stats-section">
         <div className="container">
-          <div className="stats-header fade-up">
+          <div className="stats-header reveal fade-up">
             <h2>RESULTADOS EN CIFRAS</h2>
             <div className="stats-header-line"></div>
           </div>
 
           <div className="stats-grid">
-            <div className="stat-card fade-up">
+            <div className="stat-card reveal fade-up">
               <div className="stat-icon-box"><i data-lucide="users"></i></div>
-              <div className="stat-number">+1,000</div>
+              <div className="stat-number"><AnimatedCounter value="+1,000" /></div>
               <h3 className="stat-title">Perfiles gestionados</h3>
               <p className="stat-desc">Administra el talento de tu organización en una sola plataforma integrada.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '100ms' }}>
+            <div className="stat-card reveal fade-up delay-100">
               <div className="stat-icon-box"><i data-lucide="trending-up"></i></div>
-              <div className="stat-number">+ Productividad</div>
+              <div className="stat-number"><AnimatedCounter value="+ Productividad" /></div>
               <h3 className="stat-title">Impacto en desarrollo</h3>
               <p className="stat-desc">Incremento tangible en la productividad y el desarrollo profesional del equipo.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '200ms' }}>
+            <div className="stat-card reveal fade-up delay-200">
               <div className="stat-icon-box"><i data-lucide="clock"></i></div>
-              <div className="stat-number">Tiempo real</div>
+              <div className="stat-number"><AnimatedCounter value="Tiempo real" /></div>
               <h3 className="stat-title">Visibilidad inmediata</h3>
               <p className="stat-desc">Seguimiento puntual del progreso y evolución de los usuarios al instante.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '300ms' }}>
+            <div className="stat-card reveal fade-up delay-300">
               <div className="stat-icon-box"><i data-lucide="settings"></i></div>
-              <div className="stat-number">Automatización</div>
+              <div className="stat-number"><AnimatedCounter value="Automatización" /></div>
               <h3 className="stat-title">Procesos optimizados</h3>
               <p className="stat-desc">Gestión automatizada de procesos de mentoría y rutas de capacitación.</p>
             </div>
-            <div className="stat-card fade-up" style={{ transitionDelay: '400ms' }}>
+            <div className="stat-card reveal fade-up delay-400">
               <div className="stat-icon-box"><i data-lucide="globe"></i></div>
-              <div className="stat-number">24/7</div>
+              <div className="stat-number"><AnimatedCounter value="24/7" /></div>
               <h3 className="stat-title">Acceso ubicuo</h3>
               <p className="stat-desc">Acceso garantizado desde cualquier dispositivo en todo momento.</p>
             </div>

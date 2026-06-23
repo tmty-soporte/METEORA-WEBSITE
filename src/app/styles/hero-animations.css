@@ -1,0 +1,153 @@
+/* --- HERO SECTION ANIMATIONS --- */
+
+/* 0. Hero Tagline */
+.hero-tagline {
+  opacity: 0;
+  animation: heroTaglineFade 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s forwards;
+}
+
+@keyframes heroTaglineFade {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 1. Main Title */
+.hero h1 {
+  opacity: 0;
+  animation: heroTitleFadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s forwards;
+}
+
+@keyframes heroTitleFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Subtitle / Description */
+.hero p {
+  opacity: 0;
+  animation: heroSubtitleFadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s forwards;
+}
+
+@keyframes heroSubtitleFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 3. CTA Buttons */
+.hero .hero-buttons a, 
+.hero .hero-buttons button {
+  opacity: 0;
+  animation: heroButtonFadeUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.hero .hero-buttons a:nth-child(1),
+.hero .hero-buttons button:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.hero .hero-buttons a:nth-child(2),
+.hero .hero-buttons button:nth-child(2) {
+  animation-delay: 0.85s;
+}
+
+@keyframes heroButtonFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle glow hover effect using Meteora colors */
+.hero .hero-buttons .btn-primary {
+  transition: all 0.3s ease;
+}
+.hero .hero-buttons .btn-primary:hover {
+  box-shadow: 0 0 25px rgba(84, 101, 255, 0.6), 0 0 45px rgba(65, 211, 189, 0.4);
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* 4. Logo Ribbon */
+.hero .logo-ribbon-section {
+  opacity: 0;
+  animation: heroSubtitleFadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.9s forwards;
+}
+
+/* 5. Background animated gradient / light effect */
+.hero-immersive-bg .glow-layer {
+  animation: heroPulseGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroPulseGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Minimal floating particles */
+.hero-immersive-bg .particles-layer {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: heroFloatParticles 25s linear infinite;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@keyframes heroFloatParticles {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -60px -60px;
+  }
+}
+
+/* 5. Hero Visual Smooth floating motion and fade-in from right (for product pages) */
+.hero-right .hero-visual-box {
+  opacity: 0;
+  animation: 
+    heroVisualEntrance 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s forwards,
+    heroVisualFloat 6s ease-in-out 1.6s infinite alternate;
+}
+
+@keyframes heroVisualEntrance {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroVisualFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}

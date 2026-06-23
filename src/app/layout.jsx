@@ -1,6 +1,9 @@
 import Script from 'next/script';
 import BackToTop from '../components/BackToTop';
+import ScrollObserver from '../components/ScrollObserver';
 import './styles/index.css';
+import './styles/hero-animations.css';
+import './styles/scroll-animations.css';
 
 export const metadata = {
   title: 'Meteora | Modern Technology Solutions',
@@ -28,6 +31,7 @@ export default function RootLayout({ children }) {
         <Script src="https://unpkg.com/lucide@latest" strategy="beforeInteractive" />
         
         {children}
+        <ScrollObserver />
         <BackToTop />
       </body>
     </html>
