@@ -4,6 +4,7 @@ import Script from 'next/script';
 import type { ReactNode} from 'react';
 
 import BackToTop from '@/components/layout/BackToTop/BackToTop';
+import LucideIconsInitializer from '@/components/layout/LucideIconsInitializer/LucideIconsInitializer';
 import ScrollObserver from '@/components/layout/ScrollObserver/ScrollObserver';
 
 import './styles/index.css';
@@ -40,6 +41,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           strategy="beforeInteractive"
         />
         <Script src="https://unpkg.com/lucide@latest" strategy="beforeInteractive" />
+
+        <LucideIconsInitializer />
 
         {children}
 
