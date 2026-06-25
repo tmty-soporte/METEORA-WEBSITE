@@ -1,9 +1,9 @@
 'use client';
 import { useEffect } from 'react';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import Navbar from '@/components/layout/Navbar/Navbar';
+import Footer from '@/components/layout/Footer/Footer';
 import Link from 'next/link';
-import AnimatedCounter from '../../components/AnimatedCounter';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 export default function ErgonPage() {
   useEffect(() => {

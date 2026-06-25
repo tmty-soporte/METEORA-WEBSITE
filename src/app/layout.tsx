@@ -3,8 +3,8 @@ import { Figtree } from 'next/font/google';
 import Script from 'next/script';
 import type { ReactNode} from 'react';
 
-import BackToTop from '../components/BackToTop';
-import ScrollObserver from '../components/ScrollObserver';
+import BackToTop from '@/components/layout/BackToTop/BackToTop';
+import ScrollObserver from '@/components/layout/ScrollObserver/ScrollObserver';
 
 import './styles/index.css';
 import './styles/hero-animations.css';
