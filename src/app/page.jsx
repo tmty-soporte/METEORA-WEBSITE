@@ -8,6 +8,7 @@ import AmChartsMap from '@/components/AmChartsMap';
 import HeroSection from '@/components/sections/home/HeroSection';
 import VideoStripSection from '@/components/sections/home/VideoStripSection';
 import AboutSection from '@/components/sections/home/AboutSection';
+import ServicesSection from '@/components/sections/home/ServicesSection';
 
 export default function Home() {
   useEffect(() => {
@@ -27,147 +28,7 @@ export default function Home() {
 
       <AboutSection />
 
-      {/* Servicios Section */}
-      <section className="servicios" id="servicios">
-        <div className="servicios-bg-texture">
-          <svg style={{ width: 0, height: 0, position: 'absolute' }} aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="serv-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#5465FF" />
-                <stop offset="100%" stopColor="#41D3BD" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
-            <path className="serv-line" d="M0,100 Q400,50 800,150 T1440,100" />
-            <path className="serv-line" d="M0,400 Q720,300 1440,400" />
-            <path className="serv-line" d="M0,700 Q400,750 800,650 T1440,700" />
-          </svg>
-        </div>
-        <div className="container">
-          <div className="servicios-header reveal fade-up">
-            <span className="servicios-eyebrow">Soluciones que escalan tu operación</span>
-            <h2 className="section-title">Servicios</h2>
-          </div>
-          <div className="servicios-grid">
-            <div className="service-card featured reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="layout"></i></div>
-              <div className="service-content">
-                <h3>Aplicaciones a la medida</h3>
-                <p>Soluciones personalizadas a la medida y de alta calidad flexibles a tus necesidades.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="workflow"></i></div>
-              <div className="service-content">
-                <h3>BPM</h3>
-                <p>A medida que se acelera el ritmo de cambio, las empresas necesitan mejorar su capacidad para
-                  aprovechar oportunidades. Nosotros podemos ayudarte asesorándote para identificar las
-                  mejores practicas para tu negocio.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="users"></i></div>
-              <div className="service-content">
-                <h3>Outsourcing</h3>
-                <p>Nuestros profesionales colaboran contigo poniendo a tu servicio su experiencia para con ello,
-                  lograr mantenerte a la vanguardia en TI.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="layers"></i></div>
-              <div className="service-content">
-                <h3>SOA</h3>
-                <p>Un SOA es una metodología que orquesta una colección de servicios que funcionan
-                  independientes, pero que interactúan entre ellos donde todos juntos forman una 'Solución'.
-                </p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="cloud"></i></div>
-              <div className="service-content">
-                <h3>Soluciones en la Nube</h3>
-                <p>La gestión de software y datos en la nube es una excelente alternativa para usar la
-                  tecnología de última generación a un costo competitivo.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="globe"></i></div>
-              <div className="service-content">
-                <h3>Portales Corporativos</h3>
-                <p>Un portal corporativo es más que un sitio web, es la solución que facilita la comunicación
-                  entre tus diferentes áreas de negocio y clientes.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="server"></i></div>
-              <div className="service-content">
-                <h3>Servidores de Aplicaciones</h3>
-                <p>Es el órgano principal de los sistemas, es el equivalente al corazón humano.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="code-2"></i></div>
-              <div className="service-content">
-                <h3>Expertos en Back-end</h3>
-                <p>Ofrecemos servicios que solucionarán tus necesidades de almacenamiento, administración,
-                  disponibilidad, migración y seguridad de información.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="factory"></i></div>
-              <div className="service-content">
-                <h3>Fábrica de Software</h3>
-                <p>El uso de este modelo trae beneficios para nuestros clientes porque representa ahorros en la
-                  inversión total de sus proyectos.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="cpu"></i></div>
-              <div className="service-content">
-                <h3>Arquitectura TI</h3>
-                <p>Soluciones que permitirán optimizar la infraestructura TI.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="landmark"></i></div>
-              <div className="service-content">
-                <h3>Gobierno Electrónico</h3>
-                <p>Cada día se vuelve más necesario que exista una cercanía entre la población y sus
-                  autoridades.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="bar-chart-3"></i></div>
-              <div className="service-content">
-                <h3>Inteligencia de Negocios BI</h3>
-                <p>Información completa, oportuna y en tiempo real.</p>
-              </div>
-            </div>
-            <div className="service-card reveal scale-up">
-              <div className="service-accent"></div>
-              <div className="service-icon-box"><i data-lucide="map-pin"></i></div>
-              <div className="service-content">
-                <h3>Nearshore</h3>
-                <p>Extendiendo el alcance de nuestros clientes.</p>
-              </div>
-            </div>
-            {/* Otros servicios pueden agregarse aquí */}
-          </div>
-        </div>
-      </section>
+      <ServicesSection />
 
       {/* Productos Section */}
       <section className="productos" id="productos">
