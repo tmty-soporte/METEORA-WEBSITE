@@ -1,36 +1,48 @@
+import type { Metadata } from 'next';
+import { Figtree } from 'next/font/google';
 import Script from 'next/script';
+import type { ReactNode} from 'react';
+
 import BackToTop from '../components/BackToTop';
 import ScrollObserver from '../components/ScrollObserver';
+
 import './styles/index.css';
 import './styles/hero-animations.css';
 import './styles/scroll-animations.css';
 
-export const metadata = {
+const figtree = Figtree({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap'
+});
+
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export const metadata: Metadata = {
   title: 'Meteora | Modern Technology Solutions',
   description: 'Meteora - Advanced Technology Solutions for Modern Businesses',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-
-      </head>
-      <body>
-        {/* Scripts globales críticos colocados dentro del body para evitar error de hidratación */}
+      <body className={figtree.className}>
         <Script src="https://cdn.amcharts.com/lib/5/index.js" strategy="beforeInteractive" />
         <Script src="https://cdn.amcharts.com/lib/5/map.js" strategy="beforeInteractive" />
-        <Script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js" strategy="beforeInteractive" />
-        <Script src="https://cdn.amcharts.com/lib/5/themes/Animated.js" strategy="beforeInteractive" />
+        <Script
+          src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://cdn.amcharts.com/lib/5/themes/Animated.js"
+          strategy="beforeInteractive"
+        />
         <Script src="https://unpkg.com/lucide@latest" strategy="beforeInteractive" />
-        
+
         {children}
+
         <ScrollObserver />
         <BackToTop />
       </body>

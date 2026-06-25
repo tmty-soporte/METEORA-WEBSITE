@@ -37,7 +37,7 @@ export default function AmChartsMap() {
 
       root.setThemes([window.am5themes_Animated.new(root), meteoraTheme]);
 
-      var bgDark = window.am5.color(0x0a0e12);
+      // var bgDark = window.am5.color(0x0a0e12);
       var ocean = window.am5.color(0x243f73);
       var land = window.am5.color(0x14203a);
       var border = window.am5.color(0x31456f);
