@@ -10,6 +10,7 @@ import VideoStripSection from '@/components/sections/home/VideoStripSection';
 import AboutSection from '@/components/sections/home/AboutSection';
 import ServicesSection from '@/components/sections/home/ServicesSection';
 import ProductsSection from '@/components/sections/home/ProductsSection';
+import LocationSection from '@/components/sections/home/LocationSection';
 
 export default function Home() {
   useEffect(() => {
@@ -33,27 +34,7 @@ export default function Home() {
 
       <ProductsSection />
 
-      {/* Ubicación Section (AmCharts) */}
-      <section className="ubicacion" id="ubicacion">
-        <div className="container ubicacion-layout">
-          <div className="ubicacion-header reveal fade-left">
-            <span className="ubicacion-eyebrow">Presencia Geográfica</span>
-            <h2 className="ubicacion-title">Ubicación</h2>
-            <p className="ubicacion-desc">
-              Operamos en puntos estratégicos para garantizar una cobertura eficiente y una atención cercana a nuestros clientes.
-            </p>
-            <div className="ubicacion-list">
-              <div className="ubicacion-item reveal fade-up delay-100"><i data-lucide="map-pin" className="ubicacion-icon"></i><span className="ubicacion-city">Torreón</span></div>
-              <div className="ubicacion-item reveal fade-up delay-200"><i data-lucide="map-pin" className="ubicacion-icon"></i><span className="ubicacion-city">Monterrey</span></div>
-              <div className="ubicacion-item reveal fade-up delay-300"><i data-lucide="map-pin" className="ubicacion-icon"></i><span className="ubicacion-city">Ciudad de México</span></div>
-              <div className="ubicacion-item reveal fade-up delay-400"><i data-lucide="map-pin" className="ubicacion-icon"></i><span className="ubicacion-city">Houston</span></div>
-            </div>
-          </div>
-          <div className="ubicacion-map reveal scale-up delay-200">
-            <AmChartsMap />
-          </div>
-        </div>
-      </section>
+      <LocationSection />
 
       {/* Contact Section */}
       <section className="contact" id="contact">
