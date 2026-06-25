@@ -9,6 +9,7 @@ import HeroSection from '@/components/sections/home/HeroSection';
 import VideoStripSection from '@/components/sections/home/VideoStripSection';
 import AboutSection from '@/components/sections/home/AboutSection';
 import ServicesSection from '@/components/sections/home/ServicesSection';
+import ProductsSection from '@/components/sections/home/ProductsSection';
 
 export default function Home() {
   useEffect(() => {
@@ -30,106 +31,7 @@ export default function Home() {
 
       <ServicesSection />
 
-      {/* Productos Section */}
-      <section className="productos" id="productos">
-        <div className="container">
-          <div className="productos-header reveal fade-up">
-            <span className="productos-eyebrow">NUESTRAS PLATAFORMAS TECNOLÓGICAS</span>
-            <h2 className="section-title">Soluciones que transforman tu operación</h2>
-          </div>
-          <div className="productos-grid">
-            <div className="product-card reveal fade-up">
-              <div className="product-card-left">
-                <div className="product-brand-header">
-                  <img src="/assets/logos/ergonblanco.png" alt="ERGON" className="product-brand-icon" />
-                </div>
-                <p className="product-card-desc">Gestión de servicios en campo con evidencia y trazabilidad total.</p>
-                <div className="product-features-list">
-                  <div className="feature-item"><i data-lucide="check"></i><span>Evidencia fotográfica y georreferenciada</span></div>
-                  <div className="feature-item"><i data-lucide="check"></i><span>Reportes automáticos en tiempo real</span></div>
-                </div>
-                <a href="/ergon" className="btn-product-ver">Ver más <div className="arrow-circle"><i data-lucide="arrow-right"></i></div></a>
-              </div>
-              <div className="product-card-right">
-                <img src="/assets/images/ergonfoto2.png" alt="ERGON" className="product-real-image" />
-              </div>
-            </div>
-
-            <div className="product-card reveal fade-up delay-100">
-              <div className="product-card-left">
-                <div className="product-brand-header">
-                  <img src="/assets/logos/hydrablanco.png" alt="HYDRA" className="product-brand-icon" />
-                </div>
-                <p className="product-card-desc">Gestión integral de organismos operadores de agua.</p>
-                <div className="product-features-list">
-                  <div className="feature-item"><i data-lucide="check"></i><span>Control operativo y administrativo</span></div>
-                  <div className="feature-item"><i data-lucide="check"></i><span>Automatización de procesos</span></div>
-                </div>
-                <a href="/hydra" className="btn-product-ver">Ver más <div className="arrow-circle"><i data-lucide="arrow-right"></i></div></a>
-              </div>
-              <div className="product-card-right reveal fade-right delay-300">
-                <img src="/assets/images/hydrafoto2.png" alt="HYDRA" className="product-real-image" />
-              </div>
-            </div>
-
-            <div className="product-card reveal fade-up delay-200">
-              <div className="product-card-left">
-                <div className="product-brand-header">
-                  <img src="/assets/logos/menthorblanco.png" alt="MENTHOR" className="product-brand-icon" />
-                </div>
-                <p className="product-card-desc">
-                  Desarrollo de talento y gestión del aprendizaje con herramientas inteligentes.
-                </p>
-                <div className="product-features-list">
-                  <div className="feature-item">
-                    <i data-lucide="check"></i>
-                    <span>Gestión de mentorías y capacitación estructurada</span>
-                  </div>
-                  <div className="feature-item">
-                    <i data-lucide="check"></i>
-                    <span>Seguimiento de habilidades y progreso profesional</span>
-                  </div>
-                  <div className="feature-item">
-                    <i data-lucide="check"></i>
-                    <span>Desarrollo de talento con procesos medibles</span>
-                  </div>
-                </div>
-                <a href="/menthor" className="btn-product-ver">Ver más <div className="arrow-circle"><i data-lucide="arrow-right"></i></div></a>
-              </div>
-              <div className="product-card-right reveal fade-left delay-400">
-                <img
-                  src="/assets/images/menthorfoto2.png" alt="MENTHOR Talent Development" className="product-real-image"
-                />
-              </div>
-            </div>
-
-            <div className="product-card reveal fade-up delay-300">
-              <div className="product-card-left">
-                <div className="product-brand-header">
-                  <img src="/assets/logos/sigeblanco.png" alt="SIGE" className="product-brand-icon" />
-                </div>
-                <p className="product-card-desc">Gestión eficiente de la operación energética con control y
-                  automatización.</p>
-                <div className="product-features-list">
-                  <div className="feature-item"><i data-lucide="check"></i><span>Control de volumetría y análisis
-                    energético en tiempo real</span></div>
-                  <div className="feature-item"><i data-lucide="check"></i><span>Automatización de procesos
-                    operativos y técnicos</span></div>
-                  <div className="feature-item"><i data-lucide="check"></i><span>Gestión comercial, facturación y
-                    seguimiento de consumo</span></div>
-                </div>
-                <a href="/sige" className="btn-product-ver">
-                  Ver más <div className="arrow-circle"><i data-lucide="arrow-right"></i></div>
-                </a>
-              </div>
-              <div className="product-card-right reveal fade-right delay-500">
-                <img src="/assets/images/sigefoto2.png" alt="SIGE Industrial Operations" className="product-real-image" />
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <ProductsSection />
 
       {/* Ubicación Section (AmCharts) */}
       <section className="ubicacion" id="ubicacion">
