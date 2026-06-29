@@ -1,16 +1,17 @@
-'use client';
-import { useEffect } from 'react';
-import Navbar from '@/components/layout/Navbar/Navbar';
-import Footer from '@/components/layout/Footer/Footer';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
 import AnimatedCounter from '@/components/AnimatedCounter';
+import Footer from '@/components/layout/Footer/Footer';
+import Navbar from '@/components/layout/Navbar/Navbar';
+
+export const metadata: Metadata = {
+  title: 'SIGE | Meteora',
+  description:
+    'SIGE es una solución para gestión energética, operación, volumetría, facturación y automatización de procesos.',
+};
 
 export default function SigePage() {
-  useEffect(() => {
-    if (window.lucide) {
-      window.lucide.createIcons();
-    }
-  }, []);
 
   return (
     <>

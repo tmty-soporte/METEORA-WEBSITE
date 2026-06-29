@@ -1,17 +1,17 @@
-'use client';
-import { useEffect } from 'react';
-import Navbar from '@/components/layout/Navbar/Navbar';
-import Footer from '@/components/layout/Footer/Footer';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
 import AnimatedCounter from '@/components/AnimatedCounter';
+import Footer from '@/components/layout/Footer/Footer';
+import Navbar from '@/components/layout/Navbar/Navbar';
+
+export const metadata: Metadata = {
+  title: 'Ergon | Meteora',
+  description:
+    'Ergon es una plataforma para gestión de servicios en campo con evidencia, trazabilidad y control operativo.',
+};
 
 export default function ErgonPage() {
-  useEffect(() => {
-    if (window.lucide) {
-      window.lucide.createIcons();
-    }
-  }, []);
-
   return (
     <>
       <style dangerouslySetInnerHTML={{
