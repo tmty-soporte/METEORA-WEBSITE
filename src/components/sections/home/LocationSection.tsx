@@ -1,4 +1,4 @@
-import AmChartsMap from '@/components/AmChartsMap';
+import AmChartsMap from '@/components/charts/AmChartsMap/AmChartsMap';
 import { homeLocations } from '@/data/locations';
 
 export default function LocationSection() {

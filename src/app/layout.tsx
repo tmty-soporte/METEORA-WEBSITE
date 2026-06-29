@@ -30,16 +30,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
       <body className={figtree.className}>
-        <Script src="https://cdn.amcharts.com/lib/5/index.js" strategy="beforeInteractive" />
-        <Script src="https://cdn.amcharts.com/lib/5/map.js" strategy="beforeInteractive" />
-        <Script
-          src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://cdn.amcharts.com/lib/5/themes/Animated.js"
-          strategy="beforeInteractive"
-        />
         <Script src="https://unpkg.com/lucide@latest" strategy="beforeInteractive" />
 
         <LucideIconsInitializer />
